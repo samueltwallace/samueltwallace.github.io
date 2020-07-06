@@ -50,7 +50,7 @@ snippet doc "Starts a document environment" b
 Hello World!
 
 \end{document}
-usnippet
+endsnippet
 ```
 
 This bit of code goes in a .snippets file in your UltiSnips folder with file name _filetype_.snippets where _filetype_ is the kind of file you want this snippet to work in (UltiSnips can handle this automatically with an `:UltiSnipsEdit` command). Now when we are in a _filetype_ file, we can simply type `doc` and press a predefined key to expand it into the Hello World document. 
