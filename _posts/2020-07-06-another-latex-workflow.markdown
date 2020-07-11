@@ -6,8 +6,6 @@ categories: Latex Neovim
 permalink: /latex-workflow-1-2020-07-02/
 ---
 
-# Yet Another LaTeX Workflow
-
 ## Intro
 Here is my overview for LaTeX note-taking in Neovim. I will cover what plugins I use, how I've configured these plugins, and what a typical note-taking setup looks like for me, and my reflections on the setup I have. I won't cover why I use Neovim, how these plugins compare to similar ones, or really why I use the tools I use. This is meant for me to share tools in the hopes you see something you like.
 
