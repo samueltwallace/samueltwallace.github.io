@@ -6,7 +6,7 @@ categories: Linux Git
 permalink: /live-neofetch-07-18-2020/
 ---
 
-If you haven't been to my GitHub before, you wont' have seen my [dotfiles repo](https://github.com/samuetwallace/avoidance-inspiron-dotfiles/) before (or my old [Ubuntu dotfiles](https://github.com/samuetwallace/dotfiles-inspiron/)). If you notice, I have a `curl`-able neofetch of my system there. I have devised a way to keep it updated everytime I update my dotfiles, so no more manually updating the file, adding it to my bare git repository for my dotfiles, and then commiting and pushing. I used the magic of Git hooks to make it automatic.
+If you haven't been to my GitHub before, you won't have seen my [dotfiles repo](https://github.com/samuetwallace/avoidance-inspiron-dotfiles/) before (or my old [Ubuntu dotfiles](https://github.com/samuetwallace/dotfiles-inspiron/)). If you notice, I have a `curl`-able neofetch of my system there. I have devised a way to keep it updated everytime I update my dotfiles, so no more manually updating the file, adding it to my bare git repository for my dotfiles, and then commiting and pushing. I used the magic of Git hooks to make it automatic.
 
 ## Git Hooks
 
