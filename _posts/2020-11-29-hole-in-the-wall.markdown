@@ -1,5 +1,6 @@
 ---
-layout:post
+layout: post
+date: 2020-11-29 20:40:00 -0400
 title: "Hole in the Wall Websites"
 categories: internet society
 permalink: /hole-2020-11-02/
