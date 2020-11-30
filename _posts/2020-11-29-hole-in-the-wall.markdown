@@ -1,0 +1,46 @@
+---
+layout:post
+title: "Hole in the Wall Websites"
+categories: internet society
+permalink: /hole-2020-11-02/
+---
+
+# Hole in the Wall Websites
+
+
+The internet is nothing new to me. I was born in 1998 and have been using computers for schoolwork or play for most of my life. I know how to navigate the modern web, use the common user interfaces, and can help my parents (and most of my classmates) with tech problems. Despite my apparent confidence in my knowledge of the web and computers, I am a newcomer. I have become an 'expert consumer,' someone used to the ways that big organizations design and organize their digital spaces. But it's been dawning on me how much of a newcomer to the computer game I am.
+
+### Magic in Your Own Home
+
+I have slowly stumbled, like a turn of the century European explorer in *terra incognita*, into a strange land. Perhaps it's more like Alice in Wonderland, or some other fantastical journey. Through my progress into the computing world since this past summer, I have been seeing more and more marvels of computers and the internet. I have started to glean how vast machines of industry work, and how to mimic this in your own home. Like an apprentice magician, I have been slowly but steadily working to recreate miracles I have seen.
+
+Alright, enough with the literary shenanigans. What am I talking about? I'm talking about self-hosting. This is the process of running an internet or computing service on a machine in your own home. This can range from putting up a simple file directory with files to download (like I do now) to running a website out of your spare room. You can host webpages, 'web services' (whatever that means), or any process which might involve outsourcing or sharing some computation between computers. If this piques your interest, here's some starter links for you:
+
+* [/r/selfhosted](https://www.reddit.com/r/selfhosted)
+* [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted/blob/master/README.md#)
+
+And this has absolutely blown me away. You're telling me I can do the InTeRNeT ThINg in my own home??? I am astounded. If you loved the internet, imagine your own internet that you can do yourself!
+
+But it takes some chops. Some work. It ain't easy. But that's the cost of it, I guess. But theres more! For just a few short {hours, days, weeks, months}, you can do all the things your computer already does, but on your own! It's this wonderful hobby called *programming!*
+
+But seriously, I have slowly been coming to love how much is possible with a text editor and compiler. It's amazing. 
+
+
+### Small Web - or - Hole in the Wall Websites
+
+I have also been delving into the community of programmers as well. The wizards behind the magic. As I explore personal blogs, projects, and web culture surrounding the programmers who make the world turn, I find myself more and more comfortable. I can't tell if its the aesthetic of the webpage or the writing style or subject matter, but something appeals to me about the whole thing. The kind of websites I'm talking about are some as follows:
+
+* [elly.town](http://elly.town/)
+* [hello](https://stillinbeta.com/hello)
+* [E-Cul-De-Sac](http://www.over-yonder.net/~fullermd/)
+
+You know how when you walk into a small bar or restaurant, and you feel like you just belong? You think "I could come back here a couple more times"? That's how I feel when I visit these websites. I find them downright cozy. 
+
+Sites like these are also completely new to me. The closest thing I can imagine is a STEM professor's 1998 professional website. Yet those professors keep their websites out of a "don't fix what ain't broke" philosophy but these new sites are *intentional.* The people behind them don't need flashy Javascript or stylesheets to get their point across. They have something beyond the jazz and glitz to say, and I think that's what I see and like.
+
+
+### Am I too Late?
+
+I would have loved to see the internet before it became bloated. When it was academic and professional focused. But I'm a bit too young for that. Is my chance at seeing a small web gone?
+
+I don't think so. I think some people's attitudes towards the modern web would be welcoming for another person on the small web. But there's only one way to find out.
