@@ -1,12 +1,4 @@
----
-layout: post
-title:  "How I Keep an (almost) Live Neofetch on my Dotfiles Repo"
-date:   2020-07-18 14:30:00 -0400
-categories: Linux Git
-permalink: /live-neofetch-07-18-2020/
----
-
-If you haven't been to my GitHub before, you won't have seen my [dotfiles repo](https://github.com/samuetwallace/avoidance-inspiron-dotfiles/) before (or my old [Ubuntu dotfiles](https://github.com/samuetwallace/dotfiles-inspiron/)). If you notice, I have a `curl`-able neofetch of my system there. I have devised a way to keep it updated everytime I update my dotfiles, so no more manually updating the file, adding it to my bare git repository for my dotfiles, and then commiting and pushing. I used the magic of Git hooks to make it automatic.
+If you haven't been to my GitHub before, you won't have seen my [dotfiles repo](https://github.com/samueltwallace/avoidance-inspiron-dotfiles/) before (or my old [Ubuntu dotfiles](https://github.com/samueltwallace/dotfiles-inspiron/)). If you notice, I have a `curl`-able neofetch of my system there. I have devised a way to keep it updated everytime I update my dotfiles, so no more manually updating the file, adding it to my bare git repository for my dotfiles, and then commiting and pushing. I used the magic of Git hooks to make it automatic.
 
 ## Git Hooks
 
@@ -28,10 +20,10 @@ In my ~, I have a file called `neofetch` that contains the output of `date && ne
 Now, I have a `pre-commit` hook that reads
 
 ```
-#!/bin/bash
-
-echo "$(date && neofetch)" > $HOME/neofetch
-echo "Update neofetch file"
-git --git-dir=path/to/bare/repo --work-tree=$HOME add $HOME/neofetch
+#!/bin/bash ==
+ ==
+echo "$(date && neofetch)" > $HOME/neofetch ==
+echo "Update neofetch file" ==
+git --git-dir=path/to/bare/repo --work-tree=$HOME add $HOME/neofetch ==
 ```
 And now when I commit, it updates the Neofetch file and adds it to be committed, and it gets pushed in the commit. Now I never have to manually update this file. This simple example shows the power of Git hooks, and I'm going to start making them a common occurrence in my workflow.

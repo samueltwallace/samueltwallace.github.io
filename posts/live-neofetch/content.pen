@@ -1,0 +1,17 @@
+BEGIN
+CSSDEFAULT
+TITLE:Live Neofetch on GitHub
+AUTHOR:Samuel T. Wallace
+DESCRIPTION:How I keep an (almost) live record of my neofetch on GitHub.
+BODY
+
+@include "../../navbar.pen"
+
+This is a legacy post kept for posterity. ==
+
+---
+
+@include "2020-07-18-live-neofetch.markdown"
+
+ENDBODY
+END

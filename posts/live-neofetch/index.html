@@ -1,0 +1,53 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head><link rel="stylesheet" href="styles.css"></head>
+<title>Live Neofetch on GitHub</title>
+<meta name="author" content="Samuel T. Wallace">
+<meta name="description" content="How I keep an (almost) live record of my neofetch on GitHub.">
+</head><body>
+
+<nav>
+
+<a href="./index.html">Home</a>
+<a href="posts/index.html">Article Index</a>
+<a href="me/index.html">About Me</a>
+
+</nav>
+
+
+This is a legacy post kept for posterity. <br>
+
+<hr>
+
+If you haven't been to my GitHub before, you won't have seen my <a href="dotfiles repo">https://github.com/samueltwallace/avoidance-inspiron-dotfiles/</a> before (or my old <a href="Ubuntu dotfiles">https://github.com/samueltwallace/dotfiles-inspiron/</a>). If you notice, I have a <code>curl</code>-able neofetch of my system there. I have devised a way to keep it updated everytime I update my dotfiles, so no more manually updating the file, adding it to my bare git repository for my dotfiles, and then commiting and pushing. I used the magic of Git hooks to make it automatic.
+
+<h2>Git Hooks</h2>
+
+Git hooks were something I did not know about until recently until I made a bare git repository and got into the guys of what typically goes into a .git folder. I saw this mysterious <code>hooks</code> folder and decided to investigate the folder with Google in another tab. After learning a little bit about them, I think this is the kind of thing that could be a major boost in my workflow. 
+
+Git hooks are scripts that execute when you execute git commands from the command line. This could be a commit, a push, merge, or a rebase, and could either be executed before or after the actions is taken. They are super easy to organize and use.
+
+All the scripts you want to happened go into the <code>.git/hooks</code> folder in the repo you want the scripts to activate for. Note that these scripts need to have special names, need to be executable, and only run on the machine that the folder is on (so if you push changes, the hooks won't be hooked!). Then you can write any script you want. The list of acceptable hook names are listed in an unmodified git directory in its hooks folder, but some examples include:
+<ul>
+<li> pre-commit</li>
+<li> pre-merge-commit</li>
+<li> prepare-commit-msg</li>
+<li> pre-push</li>
+</ul>
+<h2>Updating my Neofetch file</h2>
+
+In my ~, I have a file called <code>neofetch</code> that contains the output of <code>date && neofetch</code>. I used to update this every so often when I committed my dotfiles by running <code>echo "$(date && neofetch)" > $HOME/neofetch</code> whenever I remembered to. I would then add the file to be committed, then commit and push.
+
+Now, I have a <code>pre-commit</code> hook that reads
+
+<div class="codeblock"><pre>
+#!/bin/bash <br>
+ <br>
+echo "$(date && neofetch)" > $HOME/neofetch <br>
+echo "Update neofetch file" <br>
+git --git-dir=path/to/bare/repo --work-tree=$HOME add $HOME/neofetch <br>
+</pre></div>
+And now when I commit, it updates the Neofetch file and adds it to be committed, and it gets pushed in the commit. Now I never have to manually update this file. This simple example shows the power of Git hooks, and I'm going to start making them a common occurrence in my workflow.
+
+
+</body>
+</html>

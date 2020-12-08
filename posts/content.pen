@@ -1,0 +1,16 @@
+BEGIN
+CSSDEFAULT
+TITLE:Blog Index
+AUTHOR:Samuel T. Wallace
+DESCRIPTION:List of my blog posts.
+BODY
+
+@include "../navbar.pen"
+
+* [hole-in-the-wall/index.html](Hole in the Wall Websites)
+* [update-10-2020/index.html](Grad School Update)
+* [another-latex-workflow/index.html](Another LateX Workflow)
+* [welcome-to-sam/index.html](Welcome to Sam!)
+
+ENDBODY
+END

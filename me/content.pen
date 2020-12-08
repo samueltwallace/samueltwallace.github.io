@@ -1,0 +1,94 @@
+BEGIN
+CSSDEFAULT
+TITLE:About Sam
+AUTHOR:Samuel T. Wallace
+DESCRIPTION:More than you wanted to know about me.
+BODY
+
+@include "../navbar.pen"
+
+
+I am a mathematics student at a public University in Chicago, IL, USA. I like math, coding, and reading. 
+
+* [https://github.com/samueltwallace](My GitHub)
+* [https://swalla24.people.uic.edu](My Professional Website)
+* my email: samueltwallace at gmail . com
+
+The Rest of this page: //
+
+
+@list ^#+? (.+) {(.+)} / [index.html#$2]($1)<br>
+
+---
+# My Recommendations
+
+Here are things I think other people should be exposed to.
+
+## Recommended Reading {Reading}
+
+* **The Procession of the Black Sloth** by Laird Barron (Horror)
+* **The Frolic** by Thomas Ligotti (Horror)
+* **The Last Feast of the Harlequin** by Thomas Ligotti (Horror)
+* **The Troubles of Dr. Thoss** by Thomas Ligotti (Horror)
+* Most anything by Stephen King
+
+### Required Reading
+
+* **Dune** by Frank Herbert (Far-future Sci-fi, worldbuilding, cultures/society)
+* **Malazan Book of the Fallen** by Steven Erickson (High fantasy, wordbuilding, politics, power, religion, history, truth)
+* **Prose Edda** by Snori Sturlusson (History, mythology, anthropology)
+* **The Call of Cthulhu** by H.P. Lovecraft (horror)
+* **Psychological Types** by Carl Jung
+
+## Recommended Watching {Watching}
+
+* **A Beautiful Mind**
+* **Shawshank Redemption**
+
+## Recommended Listening
+
+* **Soon it will be Cold Enough** by Emancipator
+* **Late Registration** by Kanye West
+* **Tetsuo and Youth** by Lupe Fiasco
+* **Worlds** by Porter Robinson
+
+### Required Listening
+
+* **The Wall** by Pink Floyd (Prog/ Classic Rock)
+* **Bloom** by Caligula's Horse (Progressive Metal)
+* Acts I-V of The Dear Hunter (Prog Rock/Metal)
+* **The Mountain** by Haken
+
+# Math {Math}
+
+I am currently interested in the following:
+
+* Partial Differential Equations
+* Functional Analysis
+* Variational Problems and Gamma Convergence
+
+I started studying these Aug 2020 as I entered grad school. ==
+
+I have been interested in the following:
+
+* Differential Geometry
+* Dynamical systems (Hamiltonian Dynamics)
+* Lie Theory
+
+I did an independent study on Hamiltonian dynamics in my second-to-last semester of undergrad and that was the last time I studied these topics.
+
+# Coding
+
+I have coded in the following languages (listed in the order I remember them):
+
+* Java
+* Python
+* C
+* Go
+* MATLAB
+* Julia
+
+I wouldn't call myself proficient in any particular language; I don't often stick on one language enough to know it very well (which is maybe a flaw in my learning style).
+
+ENDBODY
+END

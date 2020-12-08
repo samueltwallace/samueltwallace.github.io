@@ -1,0 +1,21 @@
+BEGIN
+CSSDEFAULT
+TITLE:Hole in the Wall Websites
+AUTHOR:Samuel T. Wallace
+DESCRIPTION:The simple web, times I long for.
+BODY
+
+@include "../../navbar.pen"
+
+This is a legacy post included for posterity. ==
+
+TOC:
+@list ^### (.+)$ / * $1<br>
+
+---
+
+@include "./2020-11-29-hole-in-the-wall.markdown"
+
+
+ENDBODY
+END

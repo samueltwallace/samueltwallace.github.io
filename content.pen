@@ -1,0 +1,21 @@
+BEGIN
+
+CSSDEFAULT
+
+TITLE:Sam
+AUTHOR: Samuel T. Wallace
+DESCRIPTION:Personal Homepage of Sam Wallace
+
+BODY
+
+@include "navbar.pen"
+
+### Something Else on the Web
+
+Welcome to Sam's website. I write stuff here. Take a look around. ==
+
+
+
+ENDBODY
+
+END

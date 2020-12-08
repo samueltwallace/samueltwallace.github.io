@@ -1,11 +1,3 @@
----
-layout: post
-title:  "Yet Another LaTeX Workflow"
-date:   2020-07-06 16:10:00 -0400
-categories: Latex Neovim
-permalink: /latex-workflow-1-2020-07-02/
----
-
 ## Intro
 Here is my overview for LaTeX note-taking in Neovim. I will cover what plugins I use, how I've configured these plugins, and what a typical note-taking setup looks like for me, and my reflections on the setup I have. I won't cover why I use Neovim, how these plugins compare to similar ones, or really why I use the tools I use. This is meant for me to share tools in the hopes you see something you like.
 
@@ -26,13 +18,13 @@ To break it down some more, I'll explain their function as a plugin in detail:
 UltiSnips is a snippet plugin. What this means is that you write out some initial text, and it gets expanded automatically to predefined text. To take an example, let's look at LaTeX for a Hello World document:
 
 ```
-\documentclass{article}
-
-\begin{document}
-
-Hello World!
-
-\end{document}
+\documentclass{article} ==
+ ==
+\begin{document} ==
+ ==
+Hello World! ==
+ ==
+\end{document} ==
 ```
 
 We have 4 lines of LaTeX code to show two words. It's a lot, and its necessary since LaTeX is very verbose. You can imagine how LaTeX can do worse in needing more lines for less information (like a table or something - yuck!). UltiSnips lets me write a small bit of text that could be expanded into these 4 lines, or a flexible bit of text that I can fill out fill-in-the-blank style. Let's give a small example to see how this works.
@@ -40,15 +32,15 @@ We have 4 lines of LaTeX code to show two words. It's a lot, and its necessary s
 Let's say I write the following snippet:
 
 ```
-snippet doc "Starts a document environment" b
-\documentclass{article}
-
-\begin{document}
-
-Hello World!
-
-\end{document}
-endsnippet
+snippet doc "Starts a document environment" b ==
+\documentclass{article} ==
+ ==
+\begin{document} ==
+ ==
+Hello World! ==
+ ==
+\end{document} ==
+endsnippet ==
 ```
 
 This bit of code goes in a .snippets file in your UltiSnips folder with file name _filetype_.snippets where _filetype_ is the kind of file you want this snippet to work in (UltiSnips can handle this automatically with an `:UltiSnipsEdit` command). Now when we are in a _filetype_ file, we can simply type `doc` and press a predefined key to expand it into the Hello World document. 
@@ -56,18 +48,18 @@ This bit of code goes in a .snippets file in your UltiSnips folder with file nam
 UltiSnips is a little more flexible than this however; we can put blanks we can fill in on the fly, and have what we filled in be copied to other places. This is done with *tabstops*. Tabstops are the blanks that you can jump through with the press of a button. They can be written with a `$<num>` inside a snippet, where `<num>` is a number. Let's look at the following example:
 
 ```
-snippet begin "Starts an environment" b
-\begin{$1}
-$0
-\end{$1}
+snippet begin "Starts an environment" b ==
+\begin{$1} ==
+$0 ==
+\end{$1} ==
 ```
 
 Now when we type `begin` and press our snippet expansion key, we get
 
 ```
-\begin{|}
-
-\end{|}
+\begin{|} ==
+ ==
+\end{|} ==
 ```
 Where the | is your cursor. Yes, you have a cursor in two places! And when you type, both places get get written to. This is why we have two `$1` in the snippet - the first `$1` gets written to, and the text is mirrored to every other $1. 
 
@@ -96,19 +88,19 @@ Here I'm going to explain my key mappings for Vim, and the snippets I use and su
 First are some snippets. I have snippets for all the Greek letters, so `aa` maps to `\alpha`, `bb` to `\beta` and so on. I also have the begin environment I showed earlier as an example. I have lots of snippets for making equation writing nice. I auto-expand exponents and subscripts so that my exponent or subscripts goes in curly braces:
 
 ```
-snippet ^ "Inserts a long exponent" iA
-^{ ${1:math} }$0
-usnippet
+snippet ^ "Inserts a long exponent" iA ==
+^{ ${1:math} }$0 ==
+usnippet ==
 ```
 
 So that when I type `2^{2+2}<Tab>`, I get `2^{2+2}` and my cursor is at the end of my curly braces. I do the same things with subscripts. I also autocomplete inline math environments, so that when I type a dollar sign `$`, I get the matching end dollar sign `$ $` and I can end at the end of math environment. 
 
 I also have hte following in my .vimrc (or some equivalent in my setup)
 ```
-let g:UltiSnipsExpandTrigger="<Tab>"
-let g:UltiSnipsJumpForwardTrigger="<Tab>"
-let g:UltiSnipsJumpBackwardTrigger="<Shift-Tab>"
-let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger="<Tab>" ==
+let g:UltiSnipsJumpForwardTrigger="<Tab>" ==
+let g:UltiSnipsJumpBackwardTrigger="<Shift-Tab>" ==
+let g:UltiSnipsEditSplit="vertical" ==
 ```
 So that I press `<Tab>` to expand a snippet, jump forward through tabstops, and `<Shift+Tab>` to go back.
 
@@ -119,10 +111,10 @@ This is only slightly modified from something on the CoC GitHub page. Now, whene
 For VimTeX, I have a couple settings set, which slightly improve my experience. Here are my settings in my .vimrc:
 
 ```
-set foldmethod=expr
-set foldexpr=vimtex#fold#level(v:lnum)
-set foldtext=vimtex#fold#text()
-nnoremap <F5> \llc
+set foldmethod=expr ==
+set foldexpr=vimtex#fold#level(v:lnum) ==
+set foldtext=vimtex#fold#text() ==
+nnoremap <F5> \llc ==
 ```
 
 These pretty much enable folding over LaTeX environments, and let me use F5 for compiling instead of the long `\llc`.

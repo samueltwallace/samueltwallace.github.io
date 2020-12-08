@@ -1,0 +1,42 @@
+body {
+	text-align:justify ;
+	text-justify:inter-word;
+	font-family:Utopia;
+	margin: 5% 25% ;
+	font-size:15pt ;
+	background-color:#F6F6F6;
+}
+
+h1 {
+	font-size: 30pt;
+}
+
+p.left {
+	text-align:left ;
+}
+
+p.right {
+	text-align:right ;
+}
+
+ul {
+	margin: 1% 5%;
+}
+
+ul li{
+	text-align:left;
+}
+
+div.codeblock {
+	margin: 1% 25%;
+	background-color:#BDBFBA;
+	font-family:monospace;
+	text-align:left;
+}
+nav {
+	text-align:center;
+	text-justify:inter-word;
+	border:2px solid black;
+	margin: 5% 0%;
+	padding: 2%;
+}
