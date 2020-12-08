@@ -7,6 +7,10 @@ BODY
 
 @include "../navbar.pen"
 
+# Articles
+
+## Legacy Posts {Legacy}
+
 * [hole-in-the-wall](Hole in the Wall Websites)
 * [update-10-2020](Grad School Update)
 * [another-latex-workflow](Another LateX Workflow)

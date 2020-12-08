@@ -10,8 +10,8 @@ I have slowly stumbled, like a turn of the century European explorer in *terra i
 
 Alright, enough with the literary shenanigans. What am I talking about? I'm talking about self-hosting. This is the process of running an internet or computing service on a machine in your own home. This can range from putting up a simple file directory with files to download (like I do now) to running a website out of your spare room. You can host webpages, 'web services' (whatever that means), or any process which might involve outsourcing or sharing some computation between computers. If this piques your interest, here's some starter links for you:
 
-* [/r/selfhosted](https://www.reddit.com/r/selfhosted)
-* [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted/blob/master/README.md#)
+* [https://www.reddit.com/r/selfhosted](/r/selfhosted)
+* [https://github.com/awesome-selfhosted/awesome-selfhosted/blob/master/README.md#](awesome-selfhosted)
 
 And this has absolutely blown me away. You're telling me I can do the InTeRNeT ThINg in my own home??? I am astounded. If you loved the internet, imagine your own internet that you can do yourself!
 
