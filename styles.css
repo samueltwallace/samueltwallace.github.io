@@ -38,8 +38,9 @@ nav {
 	text-align:center;
 	text-justify:inter-word;
 	border:2px solid black;
-	margin: auto;
-	padding: 2%;
+	margin: 2% 25%;
+	padding: 2% 2%;
+	position:sticky;
 }
 
 a {
