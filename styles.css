@@ -2,7 +2,7 @@ body {
 	text-align:justify ;
 	text-justify:inter-word;
 	font-family:Utopia;
-	margin: 5% 25% ;
+	margin: 5% 10% ;
 	font-size:15pt ;
 	background-color:#F6F6F6;
 }
@@ -32,6 +32,7 @@ div.codeblock {
 	background-color:#BDBFBA;
 	font-family:monospace;
 	text-align:left;
+	border-radius:10px;
 }
 nav {
 	text-align:center;
