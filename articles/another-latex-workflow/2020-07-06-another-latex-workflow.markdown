@@ -50,7 +50,7 @@ UltiSnips is a little more flexible than this however; we can put blanks we can 
 ```
 snippet begin "Starts an environment" b ==
 \begin{$1} ==
-$0 ==
+ $0 ==
 \end{$1} ==
 ```
 
