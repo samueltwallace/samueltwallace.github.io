@@ -1,0 +1,56 @@
+BEGIN
+CSSDEFAULT
+TITLE:Sam and MBTI
+AUTHOR:Sam Wallace
+Description:More than you wanted to know about Sam's views on MBTI
+BODY
+
+@include "../../navbar.pen"
+
+# The Meyers-Briggs Type Indicator
+
+From [https://www.wikiwand.com/en/Myers%E2%80%93Briggs_Type_Indicator](Wikipedia), ==
+
+<blockquote>The Myers–Briggs Type Indicator (MBTI) is an introspective self-report questionnaire indicating differing psychological preferences in how people perceive the world and make decisions. The test attempts to assign four categories: introversion or extraversion, sensing or intuition, thinking or feeling, judging or perceiving. One letter from each category is taken to produce a four-letter test result, like "INFJ" or "ENFP". </blockquote>
+
+There is [https://www.usatoday.com/story/news/nation/2019/05/06/myers-briggs-type-indicator-does-not-matter/3635592002/](lots) [https://www.vox.com/2014/7/15/5881947/myers-briggs-personality-test-meaningless](of) [https://www.vice.com/en/article/bjv8y5/the-myers-briggs-personality-test-bullshit](dispute) over the test and its derivatives, and has been used for [https://knowledge.wharton.upenn.edu/article/does-the-myers-briggs-test-really-work/](purposes outside its original intention). However, there are [https://www.idrlabs.com/articles/2014/02/mbti-for-skeptics/](other ideas) about what it's saying. I am here to tell you why I even included my results on my website in the first place.
+
+## Origins
+
+In the beginning, there was Jung. Carl Jung was one of the early psychiatrists in Europe. He worked in Austria in the early 20th century and worked with Freud early on. The two eventually parted ways, disagreeing on their core ideas of why the mind did what it does. While Freud developed his theory of psychoanalysis, Jung developed analytical psychology. Both were highly theoretical, and neither lasted as more empirical and data-driven approaches to psychology emerged, but their influence in society and modern psychology can be seen. ==
+ ==
+One of Jung's theories was of psychological types. He identified eight ways that people tend to understand, organize, and prioritize their mental data. He called these 'cognitive functions.' He wrote about them in **Psychological Types.**
+
+## Meyers and Briggs
+
+20 years after the death of Jung, a housewife named Katharine Cooks Briggs and her daughter Isabel Briggs Meyers, read Jung's book. They concluded that Jung was onto something. They took his eight 'cognitive functions' and developed them into a typing system. They made tweaks on the personality theory, but kept it largely intact. Their biggest contribution, something Jung had never done, was to create a questionnaire for the typing system. So by answering questions, the test can report back to you what type you are, and thus what cognitive functions you use. They came up with all of this by introspection and 'people-studying,' and used data from their testing to back up their claims.
+
+## Modern MBTI
+
+Modern MBTI study is divided into two factions: corporations and organizations that use it for hiring purposes, and hobbyists that use it for developing relationships. These two stand at odds with each other in tone: organizations use it for (dis)qualifying hiring candidates and work place team building, a practice heavily criticized in the business world because of its weak empirical basis. Hobbyists stick more to the originators traditions and apply it in a more theoretical way. ==
+ 
+
+# My Take
+
+I have several point to make about MBTI. The first is that I don't think the questionnaires and tests are particularly accurate. It relies too much on the very shaky grounds of self-evaluation, so if you're not self-knowledgeable or particularly insightful about yourself, it probably won't say much. So if you come to me and complain "MBTI tests have no retest validity!", don't yell at me. I agree with you. But the tests aren't the only component of MBTI. You can take the theory behind it, Jung's theory, and evaluate that on its own. ==
+That's why I include MBTI on my website. I think it's worth investigating, because while it may not penetrate the labyrinthine passages of the human mind, I think it does make a good attempt at it. The ideas are something you read and you think "This is so obvious! Why didn't I think of this myself before!" ==
+
+I also think that the empirical validity is something to argue with. While it isn't the LHC's results on the Higgs-Boson, maybe we shouldn't expect that sort of precision from something measuring the manifest varieties of humans across cultures and societies. ==
+
+My one caveat for MBTI is that it must be used judiciously. While it's tempting to be the man of a single theory, Jung himself said that this is only the beginning of a theory for personality.
+
+# Okay, Enough about the Theory, What's your Type?
+
+As best I can tell, I am an INTJ. Notice several things:
+
+1. I didn't say that tests indicated I was an INTJ, I said that I am.
+2. I AM an INTJ, acknowledging that such a thing exists.
+
+I don't endorse every type description of each type. The one that describes me best is [https://www.idrlabs.com/intj-description.php](here), at a source I generally do endorse. If I had to give a runner up, I would give [https://sociotype.com/socionics/types/ILI-INTp/](this one), even though it is a source I generally do not endorse. This website subscribes to a variant theory called Socionics, which I don't particularly like (it makes too strong of claims without differentiating itself from MBTI significantly in practice). I include it because I think it is a good description of ME, not of INTJs. ==
+
+# Final Remarks
+
+I think MBTI must be applied carefully and should not be the sole framework for framing personality judgements. Beware anyone who believes in any personality typing theory too much, for they probably claim things that are false or non-falsifiable. ==
+
+ENDBODY
+END

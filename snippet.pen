@@ -71,7 +71,7 @@
 ^(.+)\/\/$
 	<p class="left">$1</p>
 ^(.+)==$
-	$1<br>
+	<p>$1</p><br>
 
 ^\x60\x60\x60((?:\n|.)+?)\x60\x60\x60$
 	<div class="codeblock"><pre>$1</pre></div>
