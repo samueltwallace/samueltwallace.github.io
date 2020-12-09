@@ -2,6 +2,8 @@ BEGIN
 CSSDEFAULT
 BODY
 
+@include "../../navbar.pen"
+
 # Void Linux
 
 From the [https://voidinux.org](website) ...==
