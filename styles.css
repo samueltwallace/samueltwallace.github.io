@@ -4,7 +4,7 @@ body {
 	font-family:Utopia;
 	margin: 5% 10% ;
 	font-size:15pt ;
-	background-color:#F7F7F7;
+	background-color:#FFFFFF;
 }
 
 h1 {
@@ -35,14 +35,15 @@ div.codeblock {
 	border-radius:10px;
 }
 nav {
-	text-align:center;
-	text-justify:inter-word;
+	justify-content:space-around;
+	flex-direction:row;
 	border:2px solid black;
 	margin: 2% 0%;
 	padding: 2% 2%;
 	position:sticky;
 	top: 0;
-	background-color:#F6F6F6;
+	background-color:inherit;
+	display:flex
 }
 
 a {
