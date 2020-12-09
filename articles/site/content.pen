@@ -32,6 +32,17 @@ I currently have snippets for this site configured in pseudo-markdown. I have so
 This site is currently hosted on GitHub Pages. I am thinking of changing this soon, for several reasons. I don't think Microsoft respects my privacy that much. This isn't an immediate concern, as I don't store anything sensitive on GitHub, but it a reason to not like my host. The second being that it gives me less flexibility on how I manage my site. I think a smaller host would give me more flexibility and negotiating ability for what services I run. These are all minor and vague concerns, but still on my mind. 
 
 
+## Site Design
+
+I have several influences on the visual layout of my site:
+
+* [/articles/hole-in-the-wall](Hole in the Wall Websites)
+* [https://gwern.net](Gwern Branwen)
+* IIHouse of Leaves** by Mark Z. Danielewski
+
+I like a relatively non-dynamic webpage with a rather non-linear structure. 
+
+
 
 ENDBODY
 END
