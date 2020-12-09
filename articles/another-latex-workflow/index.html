@@ -38,13 +38,13 @@ To break it down some more, I'll explain their function as a plugin in detail:
 UltiSnips is a snippet plugin. What this means is that you write out some initial text, and it gets expanded automatically to predefined text. To take an example, let's look at LaTeX for a Hello World document:
 
 <div class="codeblock"><pre>
-\documentclass{article} <br>
- <br>
-\begin{document} <br>
- <br>
-Hello World! <br>
- <br>
-\end{document} <br>
+<p>\documentclass{article} </p><br>
+<p> </p><br>
+<p>\begin{document} </p><br>
+<p> </p><br>
+<p>Hello World! </p><br>
+<p> </p><br>
+<p>\end{document} </p><br>
 </pre></div>
 
 We have 4 lines of LaTeX code to show two words. It's a lot, and its necessary since LaTeX is very verbose. You can imagine how LaTeX can do worse in needing more lines for less information (like a table or something - yuck!). UltiSnips lets me write a small bit of text that could be expanded into these 4 lines, or a flexible bit of text that I can fill out fill-in-the-blank style. Let's give a small example to see how this works.
@@ -52,15 +52,15 @@ We have 4 lines of LaTeX code to show two words. It's a lot, and its necessary s
 Let's say I write the following snippet:
 
 <div class="codeblock"><pre>
-snippet doc "Starts a document environment" b <br>
-\documentclass{article} <br>
- <br>
-\begin{document} <br>
- <br>
-Hello World! <br>
- <br>
-\end{document} <br>
-endsnippet <br>
+<p>snippet doc "Starts a document environment" b </p><br>
+<p>\documentclass{article} </p><br>
+<p> </p><br>
+<p>\begin{document} </p><br>
+<p> </p><br>
+<p>Hello World! </p><br>
+<p> </p><br>
+<p>\end{document} </p><br>
+<p>endsnippet </p><br>
 </pre></div>
 
 This bit of code goes in a .snippets file in your UltiSnips folder with file name _filetype_.snippets where _filetype_ is the kind of file you want this snippet to work in (UltiSnips can handle this automatically with an <code>:UltiSnipsEdit</code> command). Now when we are in a _filetype_ file, we can simply type <code>doc</code> and press a predefined key to expand it into the Hello World document. 
@@ -68,18 +68,18 @@ This bit of code goes in a .snippets file in your UltiSnips folder with file nam
 UltiSnips is a little more flexible than this however; we can put blanks we can fill in on the fly, and have what we filled in be copied to other places. This is done with <b>tabstops</b>. Tabstops are the blanks that you can jump through with the press of a button. They can be written with a <code>$<num></code> inside a snippet, where <code><num></code> is a number. Let's look at the following example:
 
 <div class="codeblock"><pre>
-snippet begin "Starts an environment" b <br>
-\begin{$1} <br>
- $0 <br>
-\end{$1} <br>
+<p>snippet begin "Starts an environment" b </p><br>
+<p>\begin{$1} </p><br>
+<p> $0 </p><br>
+<p>\end{$1} </p><br>
 </pre></div>
 
 Now when we type <code>begin</code> and press our snippet expansion key, we get
 
 <div class="codeblock"><pre>
-\begin{|} <br>
- <br>
-\end{|} <br>
+<p>\begin{|} </p><br>
+<p> </p><br>
+<p>\end{|} </p><br>
 </pre></div>
 Where the | is your cursor. Yes, you have a cursor in two places! And when you type, both places get get written to. This is why we have two <code>$1</code> in the snippet - the first <code>$1</code> gets written to, and the text is mirrored to every other $1. 
 
@@ -108,19 +108,19 @@ Here I'm going to explain my key mappings for Vim, and the snippets I use and su
 First are some snippets. I have snippets for all the Greek letters, so <code>aa</code> maps to <code>\alpha</code>, <code>bb</code> to <code>\beta</code> and so on. I also have the begin environment I showed earlier as an example. I have lots of snippets for making equation writing nice. I auto-expand exponents and subscripts so that my exponent or subscripts goes in curly braces:
 
 <div class="codeblock"><pre>
-snippet ^ "Inserts a long exponent" iA <br>
-^{ ${1:math} }$0 <br>
-usnippet <br>
+<p>snippet ^ "Inserts a long exponent" iA </p><br>
+<p>^{ ${1:math} }$0 </p><br>
+<p>usnippet </p><br>
 </pre></div>
 
 So that when I type <code>2^{2+2}<Tab></code>, I get <code>2^{2+2}</code> and my cursor is at the end of my curly braces. I do the same things with subscripts. I also autocomplete inline math environments, so that when I type a dollar sign <code>$</code>, I get the matching end dollar sign <code>$ $</code> and I can end at the end of math environment. 
 
 I also have hte following in my .vimrc (or some equivalent in my setup)
 <div class="codeblock"><pre>
-let g:UltiSnipsExpandTrigger="<Tab>" <br>
-let g:UltiSnipsJumpForwardTrigger="<Tab>" <br>
-let g:UltiSnipsJumpBackwardTrigger="<Shift-Tab>" <br>
-let g:UltiSnipsEditSplit="vertical" <br>
+<p>let g:UltiSnipsExpandTrigger="<Tab>" </p><br>
+<p>let g:UltiSnipsJumpForwardTrigger="<Tab>" </p><br>
+<p>let g:UltiSnipsJumpBackwardTrigger="<Shift-Tab>" </p><br>
+<p>let g:UltiSnipsEditSplit="vertical" </p><br>
 </pre></div>
 So that I press <code><Tab></code> to expand a snippet, jump forward through tabstops, and <code><Shift+Tab></code> to go back.
 
@@ -131,10 +131,10 @@ This is only slightly modified from something on the CoC GitHub page. Now, whene
 For VimTeX, I have a couple settings set, which slightly improve my experience. Here are my settings in my .vimrc:
 
 <div class="codeblock"><pre>
-set foldmethod=expr <br>
-set foldexpr=vimtex#fold#level(v:lnum) <br>
-set foldtext=vimtex#fold#text() <br>
-nnoremap <F5> \llc <br>
+<p>set foldmethod=expr </p><br>
+<p>set foldexpr=vimtex#fold#level(v:lnum) </p><br>
+<p>set foldtext=vimtex#fold#text() </p><br>
+<p>nnoremap <F5> \llc </p><br>
 </pre></div>
 
 These pretty much enable folding over LaTeX environments, and let me use F5 for compiling instead of the long <code>\llc</code>.

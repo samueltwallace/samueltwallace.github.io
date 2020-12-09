@@ -16,11 +16,11 @@
 
 <h1>This Site</h1>
 
-This is information of how this site is created,  maintained, and managed. <br>
+<p>This is information of how this site is created,  maintained, and managed. </p><br>
 
 <h2>Static Site Generation</h2>
 
-In the past I've used <a href="https://jekyllrb.com">Jekyll</a> for static site generation. I found it a little limiting (although it's possible I just wasn't leveraging its full potential). <br>
+<p>In the past I've used <a href="https://jekyllrb.com">Jekyll</a> for static site generation. I found it a little limiting (although it's possible I just wasn't leveraging its full potential). </p><br>
 
 I wrote my own static site generator for this site. It is about 150 lines of Go, and it essentially runs a snippet engine. I specify a number of regular expressions and replacement expressions, and write files containing webpage content, including my previously specified regular expressions (the snippets). I can also specify to copy directly the contents of another file, and to list all matches of a regular expression in a file. Then the following steps are executed by the program:
 <ol>
@@ -29,7 +29,7 @@ I wrote my own static site generator for this site. It is about 150 lines of Go,
 <li>Snippets are expanded: the specified regular expressions are changed into HTML as specified in the snippet file.</li>
 </ol>
 
-This is all the program does at current. This makes it very flexible, but has led me to call it a 'do-it-yourself' static site generator: there are many things left to be done. For example, you have to manually write out all style sheets, and you have to know what HTML to use in your snippets. This program works well for someone who needs to save time writing a big site, not someone who is new to basic web design. <br>
+<p>This is all the program does at current. This makes it very flexible, but has led me to call it a 'do-it-yourself' static site generator: there are many things left to be done. For example, you have to manually write out all style sheets, and you have to know what HTML to use in your snippets. This program works well for someone who needs to save time writing a big site, not someone who is new to basic web design. </p><br>
 
 I currently have snippets for this site configured in pseudo-markdown. I have some markdown and some LaTeX-like syntax. 
 
