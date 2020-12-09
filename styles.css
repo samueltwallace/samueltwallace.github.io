@@ -46,6 +46,14 @@ nav {
 	display:flex
 }
 
+div.sidenote {
+	float:right;
+	margin:1% 5%;
+	border: 2px solid black;
+	padding: 2% 2%;
+	max-width: 35%;
+}
+
 a {
 	color:#636363;
 }

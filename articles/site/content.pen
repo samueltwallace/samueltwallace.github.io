@@ -13,6 +13,8 @@ This is information of how this site is created,  maintained, and managed. ==
 
 ## Static Site Generation
 
+In the past I've used [https://jekyllrb.com](Jekyll) for static site generation. I found it a little limiting (although it's possible I just wasn't leveraging its full potential). ==
+
 I wrote my own static site generator for this site. It is about 150 lines of Go, and it essentially runs a snippet engine. I specify a number of regular expressions and replacement expressions, and write files containing webpage content, including my previously specified regular expressions (the snippets). I can also specify to copy directly the contents of another file, and to list all matches of a regular expression in a file. Then the following steps are executed by the program:
 
 1. `@include` statements are read: contents from other specified files are inserted literally into the file

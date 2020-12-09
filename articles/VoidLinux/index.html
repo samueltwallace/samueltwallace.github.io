@@ -26,9 +26,12 @@ This was my first minimal Linux distribution. This is to serve as an ongoing rev
 
 I loved the install process. It made the installation easy. A nice TUI interface guides you through everything that would go into a <code>chroot</code>-ed installation, no mess, no fuss, exit any time. That said, I neglected some of the finer details of the installation process, maybe because I was too preoccupied with the nice interface. It requires quite a bit of knowledge about installing linux (e.g. partitioning, addusr, passwd, etc.). I think if there is anext time, I will opt for a chroot installation. <br>
 
-<h3>System configuration</h3>
+<h3>System configuration<sup><a href="#sidenote1">1</a></sup></h3>
+
+<div class="sidenote"><sup><a href="sidenote1">1</a></sup>You should read <a href="https://docs.voidlinux.org/config/index.html">the manual</a>.</div>
 
 This is all pretty standard for a Linux system. The biggest difference is the one Void prides itself on, the use of runit as an init service. For those of you not familiar, the init system is the first process in the operating system. It also manages processes, killing dead ('zombie') processes, and manages services. The CLI is easy to use, a simple <code>sudo sv up $SERVICE </code> starts a service, and soft-linking a directory to the /var/service directory marks a systems to be enabled. Not bad at all.
+
 
 <h3>Package Repositories</h3>
 
