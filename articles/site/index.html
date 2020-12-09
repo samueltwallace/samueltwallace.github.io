@@ -1,0 +1,42 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head><link rel="stylesheet" href="styles.css"></head>
+<title>This site</title>
+<meta name="author" content="Sam Wallace">
+<meta name="description" content="More about the management and internals of this site.">
+</head><body>
+
+<nav>
+
+<a href="/">Home</a>
+<a href="/articles">Article Index</a>
+<a href="/me/">About Me</a>
+
+</nav>
+
+
+<h1>This Site</h1>
+
+This is information of how this site is created,  maintained, and managed. <br>
+
+<h2>Static Site Generation</h2>
+
+I wrote my own static site generator for this site. It is about 150 lines of Go, and it essentially runs a snippet engine. I specify a number of regular expressions and replacement expressions, and write files containing webpage content, including my previously specified regular expressions (the snippets). I can also specify to copy directly the contents of another file, and to list all matches of a regular expression in a file. Then the following steps are executed by the program:
+<ol>
+<li><code>@include</code> statements are read: contents from other specified files are inserted literally into the file</li>
+<li><code>@list</code> statements are read: all matches for a specified regular expression are found, and the results are formatted and returned.</li>
+<li>Snippets are expanded: the specified regular expressions are changed into HTML as specified in the snippet file.</li>
+</ol>
+
+This is all the program does at current. This makes it very flexible, but has led me to call it a 'do-it-yourself' static site generator: there are many things left to be done. For example, you have to manually write out all style sheets, and you have to know what HTML to use in your snippets. This program works well for someone who needs to save time writing a big site, not someone who is new to basic web design. <br>
+
+I currently have snippets for this site configured in pseudo-markdown. I have some markdown and some LaTeX-like syntax. 
+
+
+<h2>Hosting</h2>
+
+This site is currently hosted on GitHub Pages. I am thinking of changing this soon, for several reasons. I don't think Microsoft respects my privacy that much. This isn't an immediate concern, as I don't store anything sensitive on GitHub, but it a reason to not like my host. The second being that it gives me less flexibility on how I manage my site. I think a smaller host would give me more flexibility and negotiating ability for what services I run. These are all minor and vague concerns, but still on my mind. 
+
+
+
+</body>
+</html>
