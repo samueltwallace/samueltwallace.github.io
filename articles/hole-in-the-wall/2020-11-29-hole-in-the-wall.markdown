@@ -24,9 +24,9 @@ But seriously, I have slowly been coming to love how much is possible with a tex
 
 I have also been delving into the community of programmers as well. The wizards behind the magic. As I explore personal blogs, projects, and web culture surrounding the programmers who make the world turn, I find myself more and more comfortable. I can't tell if its the aesthetic of the webpage or the writing style or subject matter, but something appeals to me about the whole thing. The kind of websites I'm talking about are some as follows:
 
-* [elly.town](http://elly.town/)
-* [hello](https://stillinbeta.com/hello)
-* [E-Cul-De-Sac](http://www.over-yonder.net/~fullermd/)
+* [http://elly.town/](elly.town)
+* [https://stillinbeta.com/hello](hello)
+* [http://www.over-yonder.net/~fullermd/](E-Cul-De-Sac)
 
 You know how when you walk into a small bar or restaurant, and you feel like you just belong? You think "I could come back here a couple more times"? That's how I feel when I visit these websites. I find them downright cozy. 
 

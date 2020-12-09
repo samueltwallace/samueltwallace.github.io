@@ -4,7 +4,7 @@ body {
 	font-family:Utopia;
 	margin: 5% 10% ;
 	font-size:15pt ;
-	background-color:#F6F6F6;
+	background-color:#F7F7F7;
 }
 
 h1 {
@@ -38,9 +38,11 @@ nav {
 	text-align:center;
 	text-justify:inter-word;
 	border:2px solid black;
-	margin: 2% 25%;
+	margin: 2% 0%;
 	padding: 2% 2%;
 	position:sticky;
+	top: 0;
+	background-color:#F6F6F6;
 }
 
 a {
