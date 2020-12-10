@@ -24,28 +24,27 @@
 
 <h3>Big Musls</h3>
 
-I chose the musl version of Void, for almost no reason than to try it out. On the whole, it hasn't made a difference for me a bit. Maybe because I don't know my computer well enough to understand the advantages, but also I don't do anything too low leve on the operating system. All I can say is that I now can't use WideVine to watch Netflix on Void (which is fine; I can watch it on Windows). That gap, however, makes my work machine, well, a work machine. The most distracting thing I can do is watch Youtube, which I don't do anyways.
+<p>I chose the musl version of Void, for almost no reason than to try it out. On the whole, it hasn't made a difference for me a bit. Maybe because I don't know my computer well enough to understand the advantages, but also I don't do anything too low leve on the operating system. All I can say is that I now can't use WideVine to watch Netflix on Void (which is fine; I can watch it on Windows). That gap, however, makes my work machine, well, a work machine. The most distracting thing I can do is watch Youtube, which I don't do anyways. </p><br>
 
 <h3>Install Process</h3>
 
-<p>I loved the install process. It made the installation easy. A nice TUI interface guides you through everything that would go into a <code>chroot</code>-ed installation, no mess, no fuss, exit any time. That said, I neglected some of the finer details of the installation process, maybe because I was too preoccupied with the nice interface. It requires quite a bit of knowledge about installing linux (e.g. partitioning, addusr, passwd, etc.). I think if there is anext time, I will opt for a chroot installation. </p><br>
+<p>I loved the install process. It made the installation easy. A nice TUI interface guides you through everything that would go into a <code>chroot</code>-ed installation, no mess, no fuss, exit any time. That said, I neglected some of the finer details of the installation process, maybe because I was too preoccupied with the nice interface. It requires quite a bit of knowledge about installing linux (e.g. partitioning, addusr, passwd, etc.). I think if there is a next time, I will opt for a chroot installation. </p><br>
 
 <h3>System configuration<sup><a href="#sidenote1">1</a></sup></h3>
 
 <div class="sidenote"><sup><a id="sidenote1">1</a></sup>You should read <a href="https://docs.voidlinux.org/config/index.html">the manual</a>.</div>
 
-This is all pretty standard for a Linux system. The biggest difference is the one Void prides itself on, the use of runit as an init service. For those of you not familiar, the init system is the first process in the operating system. It also manages processes, killing dead ('zombie') processes, and manages services. The CLI is easy to use, a simple <code>sudo sv up $SERVICE </code> starts a service, and soft-linking a directory to the /var/service directory marks a systems to be enabled. Not bad at all.
-
+<p>This is all pretty standard for a Linux system. The biggest difference is the one Void prides itself on, the use of runit as an init service. For those of you not familiar, the init system is the first process in the operating system. It also manages processes, killing dead ('zombie') processes, and manages services. The CLI is easy to use, a simple <code>sudo sv up $SERVICE </code> starts a service, and soft-linking a directory to the /var/service directory marks a systems to be enabled. Not bad at all. </p><br>
 
 <h3>Package Repositories</h3>
 
-This is where I feel most disappointed with Void; I think the repositories are lacking. I would like to see more of small stuff. There hasn't been any deal-breaking packages I haven't been able to find, but I am consistently disappointed with my small searches. There's not much community around Void.
+<p>This is where I feel most disappointed with Void; I think the repositories are lacking. I would like to see more of small stuff. There hasn't been any deal-breaking packages I haven't been able to find, but I am consistently disappointed with my small searches. There's not much community around Void. </p><br>
 
 <h3>Development Team</h3>
 
 <p>This is another point of disappointment with Void. Their main developer (xtraeme) has been acting somewhat erratically. He was apparently a pain to work with (not a claim I've seen him refute) and got booted off the team, and his account on GitHub got suspended. Then he continues writing programs and packages for Void and posting them to Reddit.  </p><br>
 
-But on a more concrete note, there hasn't been a release of iso in over a year. I fear the system is soon to be dead. The only serious users are a couple of ricers over on /r/unixporn. The major roles filled by minimal operating systems are filled. Even Void's claim to fames are not unique or even special, <a href="https://distrowatch.com/search.php?ostype=All&category=All&origin=All&basedon=All&notbasedon=None&desktop=All&architecture=All&package=All&rolling=All&isosize=All&netinstall=All&language=All&defaultinit=Not+systemd&status=Active#simple">a search on Distrowatch</a> shows many non-systemd init systems, and runit shows a far more popular distro, antiX. There is really nothing to make Void stand out anymore.
+<p>But on a more concrete note, there hasn't been a release of iso in over a year. I fear the system is soon to be dead. The only serious users are a couple of ricers over on /r/unixporn. The major roles filled by minimal operating systems are filled. Even Void's claim to fames are not unique or even special, <a href="https://distrowatch.com/search.php?ostype=All&category=All&origin=All&basedon=All&notbasedon=None&desktop=All&architecture=All&package=All&rolling=All&isosize=All&netinstall=All&language=All&defaultinit=Not+systemd&status=Active#simple">a search on Distrowatch</a> shows many non-systemd init systems, and runit shows a far more popular distro, antiX. There is really nothing to make Void stand out anymore. </p><br>
 
 </body>
 </html>

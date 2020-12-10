@@ -103,7 +103,7 @@ I have been interested in the following:
 * Dynamical systems (Hamiltonian Dynamics)
 * Lie Theory
 
-I did an independent study on Hamiltonian dynamics in my second-to-last semester of undergrad and that was the last time I studied these topics.
+I did an independent study on Hamiltonian dynamics in my second-to-last semester of undergrad and that was the last time I studied these topics. ==
 
 Math Links:
 
@@ -120,11 +120,13 @@ I have coded in the following languages (listed in the order I remember them):
 * MATLAB
 * Julia
 
-I wouldn't call myself proficient in any particular language; I don't often stick on one language enough to know it very well (which is maybe a flaw in my learning style). I code for fun, (currently) not for work or any paid ventures, or really any ventures other than my own personal use.
+I wouldn't call myself proficient in any particular language; I don't often stick on one language enough to know it very well (which is a flaw in my learning pattern). I code for fun, (currently) not for work or any paid ventures, or really any ventures other than my own personal use. I prefer object-oriented programming, I think it gives more structure to a program and it eases my own thinking about the organization and flow of a program. ==
+
+Many professional coders refer to themselves as engineers; I do not like that term. I think coders range in expertise and skills, and do not work (generally) on public infrastructure. Essentially, the reasons for a lack of [https://www.wikiwand.com/en/Principles_and_Practice_of_Engineering_Examination](Professional Engineer's exam) and its enforcement speak to my main points: there is no oversight on the projects professional coders work on. This oversight is important for ensuring engineers put out services in the public's interest. I don't consider professional coders engineers because of the lack of oversight.
 
 # Workstation and Machines {Workstation}
 
-I am currently doing everything off of a laptop. It is a Dell Inspiron 15 5000 Series, it is 5 years old, and runs like a charm with some operating system tweaks. I have an HP monitor and a Ducky One Mini 2 Keyboard (though I will be building a new one soon). I dual boot Windows 10 and [https://voidlinux.org](Void Linux) (the musl version, on a whim). I also have a Kenting writing tablet when I teach. ==
+I am currently doing everything off of a laptop. It is a Dell Inspiron 15 5000 Series, it is 5 years old, and runs like a charm with some operating system tweaks. I have an HP monitor and a Ducky One Mini 2 Keyboard (though I will be building a new one soon). I dual boot Windows 10 and [/articles/VoidLinux](Void Linux) (the musl version, on a whim). I also have a Kenting writing tablet when I teach. ==
 
  I also have another machine that serves as a personal server I use on my wireless network for file storage and long-running processes. It is an old laptop of my sister's, a Toshiba Satellite. I currently run a personal archive of (semi-illegally) downloaded paper and textbook PDFs served over Nginx. I am planning on changing operating systems on this machine from the current Void Linux to FreeBSD (for reasons that I will share soon).
 
