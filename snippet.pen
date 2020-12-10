@@ -98,3 +98,8 @@
 
 ^{(.+)}\((.+)\)$
 	<iframe src="$1" title="$2"></iframe>
+
+^"$
+	<blockquote><em>
+^""$
+	</em></blockquote>
