@@ -41,10 +41,9 @@ nav {
 	border:2px solid black;
 	margin: 2% 0%;
 	padding: 2% 2%;
-	position:sticky;
 	top: 0;
 	background-color:inherit;
-	display:flex
+	display:flex;
 }
 
 div.sidenote {
