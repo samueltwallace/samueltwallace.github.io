@@ -8,7 +8,7 @@ BODY
 @include "../navbar.pen"
 
 
-I am a full-time mathematics student, as well as a part-time programmer and rationalist.
+I am a full-time mathematics student, as well as a part-time programmer and part-time rationalist.
 
 * [https://github.com/samueltwallace](My GitHub)
 * my email: samueltwallace at gmail . com
@@ -36,39 +36,48 @@ Here are things I think other people should be exposed to.
 
 ## Recommended Reading {Reading}
 
+$1 "Deep in the human unconscious is a pervasive need for a logical universe that makes sense. But the real universe is always one step beyond logic."
+
 * **The Procession of the Black Sloth** by Laird Barron (Horror)
 * **The Frolic** by Thomas Ligotti (Horror)
 * **The Last Feast of the Harlequin** by Thomas Ligotti (Horror)
 * **The Troubles of Dr. Thoss** by Thomas Ligotti (Horror)
-* **Foundation** Trilogy by Isaac Asimov
-* Most anything by Stephen King
+* **Foundation** Trilogy by Isaac Asimov (Far Future Sci-fi, society, history, technology)
+* Most anything by Stephen King (Horror, the human experience)
+
+$2 "The more civilized a nation, the more conformed its population, until that civilization's last age arrives, when multiplicity wages war with conformity. The former grows ever wilder, ever more dysfunctional in its extremities; whilst the latter seeks to increase its measure of control, until such efforts acquire diabolical tyranny."
 
 ### Required Reading
 
-* **Dune** by Frank Herbert (Far-future Sci-fi, worldbuilding, cultures/society)
-* **Malazan Book of the Fallen** by Steven Erickson (High fantasy, wordbuilding, politics, power, religion, history, truth)
+
+* **Dune** by Frank Herbert (Far-future Sci-fi, worldbuilding, cultures/society)^1
+* **Malazan Book of the Fallen** by Steven Erickson (High fantasy, wordbuilding, politics, power, religion, history, truth)^2
 * **Prose Edda** by Snori Sturlusson (History, mythology, anthropology)
-* **The Call of Cthulhu** by H.P. Lovecraft (horror)
+* **The Call of Cthulhu** by H.P. Lovecraft (horror)^3
 * **Psychological Types** by Carl Jung (Psychology, personality)
+
+$3 "We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far."
+
 
 ## Recommended Watching {Watching}
 
 * **A Beautiful Mind**
 * **Shawshank Redemption**
 
+
 ## Recommended Listening {Listening}
 
-* **Soon it will be Cold Enough** by Emancipator
-* **Late Registration** by Kanye West
-* **Tetsuo and Youth** by Lupe Fiasco
-* **Worlds** by Porter Robinson
+* **Soon it will be Cold Enough** by Emancipator (New Age, Instrumental, Chill)
+* **Late Registration** by Kanye West (Hip Hop)
+* **Tetsuo and Youth** by Lupe Fiasco (Hip Hop)
+* **Worlds** by Porter Robinson (Electronic)
 
 ### Required Listening
 
-* **The Wall** by Pink Floyd (Prog/ Classic Rock)
+* **The Wall** by Pink Floyd (Prog/Classic Rock)
 * **Bloom** by Caligula's Horse (Progressive Metal)
 * Acts I-V of The Dear Hunter (Prog Rock/Metal)
-* **The Mountain** by Haken
+* **The Mountain** by Haken (Progressive Metal)
 
 ## Recommended Visiting {Visiting}
 
@@ -76,7 +85,7 @@ Here are things I think other people should be exposed to.
 
 ### Required Visiting
 
-* [https://lesswrong.com/codex](Less Wrong's version of the Codex)
+* [https://lesswrong.com/codex](Less Wrong's the Codex)
 
 # Math {Math}
 
@@ -88,7 +97,7 @@ I am currently interested in the following:
 
 I started studying these Aug 2020 as I entered grad school. ==
 
-I have been interested in the following:
+I have been interested in the following: ==
 
 * Differential Geometry
 * Dynamical systems (Hamiltonian Dynamics)

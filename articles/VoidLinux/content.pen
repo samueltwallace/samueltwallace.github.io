@@ -15,6 +15,10 @@ From the [https://voidlinux.org](website) ...==
 
 This was my first minimal Linux distribution. This is to serve as an ongoing review for my use and interaction with my two machines running the operating system. ==
 
+### Big Musls
+
+I chose the musl version of Void, for almost no reason than to try it out. On the whole, it hasn't made a difference for me a bit. Maybe because I don't know my computer well enough to understand the advantages, but also I don't do anything too low leve on the operating system. All I can say is that I now can't use WideVine to watch Netflix on Void (which is fine; I can watch it on Windows). That gap, however, makes my work machine, well, a work machine. The most distracting thing I can do is watch Youtube, which I don't do anyways.
+
 ### Install Process
 
 I loved the install process. It made the installation easy. A nice TUI interface guides you through everything that would go into a `chroot`-ed installation, no mess, no fuss, exit any time. That said, I neglected some of the finer details of the installation process, maybe because I was too preoccupied with the nice interface. It requires quite a bit of knowledge about installing linux (e.g. partitioning, addusr, passwd, etc.). I think if there is anext time, I will opt for a chroot installation. ==
