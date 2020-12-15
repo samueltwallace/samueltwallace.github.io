@@ -1,0 +1,87 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head><link rel="stylesheet" href="styles.css"></head>
+BODY 
+
+<h1>How long wil I live?</h1>
+
+Probably a question on many people's mind. I'm going to dig into some fairly common statistics to get a rough idea for the answer. I'll also do a little research on how I can improve this number.
+
+<hr>
+
+
+<h2 id="Methods"><a href="#Methods">Methods and Data</a></h2>
+
+<div class="sidenote"><sup><a id="sidenote1">1</a></sup>Per <a href="https://www.wikiwand.com/en/Life_table">Wikipedia</a>, this is "a table which shows, for each age, what the probability is that a person of that age will die before their next birthday [...] it represents the survivorship of people from a certain generation." It's a reference in the actuarial sciences to estimate prices of insurance products.</div>
+
+The main tool I'm going to be using to determine how long I will live is <em>actuarial tables</em><sup><a href="#sidenote1">1</a></sup>. There are several reasons I want to use this as a main reference:
+<ul>
+<li> They're backed up by data: Insurance companies keep track of this stuff in order to make money. And they're doing pretty well, so they must be doing something right.</li>
+<li> They're available: The US government and various actuarial institutes make past data available to the public, and making it easy for me to use as well.</li>
+<li> They're backed up by reliability: Insurance companies have been making a profit off this data for a while now, so they have learned to do the statistics right.</li>
+</ul>
+<p>Now I'm an applied math guy, and not a statistics guy, so I won't comment too heavily on the statistics. I can do some clever thinking about probability calculations, and that's about it. </p><br>
+
+My main source will be the <a href="https://www.soa.org/research/topics/research-emerging-topics/#population">Society of Actuaries' Research Page</a>, where there are convenient tools and calculators. 
+
+<h2 id="Basic"><a href="#Basic">Basic Demographics</a></h2>
+
+<p>The way you go through actuary tables is to specify demographics you belong to. So we'll start with the easy ones. I'm a male born in 1998, and I don't smoke, and I'm in pretty good health compared to the typical 23 year old. Let's see what we can get with that alone. </p><br>
+
+I used <a href="https://www.longevityillustrator.org/">a handy-dandy calculator</a> and saw that there was:
+<ul>
+<li> A 100% chance I live to my expected retirement age (65, just as a guess). This is always returned at 100% by the model.</li>
+<li> A 92% chance I live to 75</li>
+<li> A 73% chance I live to 85</li>
+<li> A 37% chance I live to 95</li>
+</ul>
+<p>And there's a handy graph at the bottom showing a logistic-like curve that tells me how long I have to live past my retirement age. </p><br>
+
+This seems like a good first attempt with litle information about me. It gives me an expected age of 90. Not bad! But this is a pretty crude test, I think it would describe me and my roommates all pretty well, though I all doubt we live to 90. Let's try something more specific.
+
+<h2 id="Class"><a href="#Class">Class Considerations</a></h2>
+
+<p>After I get out of school, I'm almost definitely going to be in a white-collar job. I come from a middle-class white family in the US. Let's see what we get from that. </p><br>
+
+<div class="sidenote"><sup><a id="sidenote2">2</a></sup>Interestingly enough, there's a higher life expectancy for group insurance than individual insurance. Maybe group insurance comes with a good paying-job?</div>
+<ul>
+<li> Being on a group insurance plan (like one I am going to get from my future employer)<sup><a href="#sidenote2">2</a></sup></li>
+<li> On a private pension plan in a white-collar job, I have a 17% chance of living to 100</li>
+</ul>
+Here's where the easy graphics and calculators end. Now I actually have to dig into <a href="https://stacks.cdc.gov/pdfjs/web/viewer.html?file=https://stacks.cdc.gov/view/cdc/78186/cdc_78186_DS1.pdf">a table</a>.
+<ul>
+<li> There was a less than 1% chance of me dying by 2001. That's nice to hear.</li>
+<li> I have a life expectancy of 77.6</li>
+</ul>
+
+<h2 id="Death"><a href="#Death">Cause of Death</a></h2>
+
+I stumbled upon a chart of probability of dying from certain causes, grouped by age and race. You can take a look at the <a href="https://stacks.cdc.gov/pdfjs/web/viewer.html?file=https://stacks.cdc.gov/view/cdc/13714/cdc_13714_DS1.pdf">full table</a> yourself, but I'll report the interesting ones here:
+<ul>
+<li> 1.3% chance of dying by injury by firearms</li>
+<li> 1.5% chance of dying by suicide</li>
+<li> 1.1% chance of dying by septicemia</li>
+<li> 7.7% chance of dying by "acute myocardial infarction" (heart attack)</li>
+<li> 2.2% chance of dying by heart failure</li>
+<li> 4.0% chance of dying by accident</li>
+<li> 7.5% chance of dying by lung cancer</li>
+</ul>
+These are pretty interesting. Health risks are the highest, especially heart problems, making an almost whopping 10% of my probable causes of death.
+
+<h2 id="Other"><a href="#Other">Other Demographics</a></h2>
+
+<p>I don't work out hardly ever. Let's see what that tells us. </p><br>
+
+<p>I will be looking at <a href="https://stacks.cdc.gov/pdfjs/web/viewer.html?file=https://stacks.cdc.gov/view/cdc/39302/cdc_39302_DS1.pdf">This study</a> which relates physical activity to "health-related quality of life" - an amalgamation of some self-reported measures of health. The authors measured HRQOL by two questions, "Now thinking about your physical health, which includes physical illness and injury, for how many days during hte past 30 days was your physical health not good?" and "Now thinking about  your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 was your mental health not good?" </p><br>
+
+And survey says... I'm at a highest risk for a stretch of bad health at least 14 days, at about 16%.
+
+<h2 id="Conclusions"><a href="#Conclusions">Conclusions</a></h2>
+
+<div class="sidenote"><sup><a id="sidenote3">3</a></sup>This study also comments that past studies on this topic ignore the fact that genetic similarities often arise between spouses. This may be a more significant factor than others. They also comment on the transferral of socioeconomic resources in a marriage, and how that may contribute to increased longevity.</div>
+
+<p>I gained some insight into my demographics and factors for death. I have a pretty good life expectancy (80+), supported by my anecdotal grandparents' ages (90+). Though this may not be true, as <a href="https://www.genetics.org/content/210/3/1109.figures-only">spousal lifespan has a higher correlation with your own lifespan than your blood family's</a><sup><a href="#sidenote3">3</a></sup>. So maybe I should marry someone with a long projected life span rather than depending on my genes. </p><br>
+
+Another thing to consider is not that I want to live grossly longer, but also maintain some quality of life in my old age. I think <a href="#Other">my lack of exercise</a> does not help this at all. If I want to live longer, I need to take steps to ensure my old age is enjoyable. Anyone who's seen a documentary on longevity has heard that centenarians in various places (Italy, Greece, Japan) maintain some exercise, a good social life, and are vegetarian. While I haven't look for statistics to back this up, I think these are important not only for extending your lifetime, but also for enjoying your lifetime.
+
+ENBODY
+</html>
