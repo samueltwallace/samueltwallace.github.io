@@ -1,8 +1,13 @@
 BEGIN
 CSSDEFAULT
-BODY 
+TITLE:How long will I live?
+AUTHOR:Sam Wallace
+DESCRIPTION:My demographics, statistics, and my projected lifespan.
+BODY
 
-# How long wil I live?
+@include "../../navbar.pen"
+
+# How long will I live?
 
 Probably a question on many people's mind. I'm going to dig into some fairly common statistics to get a rough idea for the answer. I'll also do a little research on how I can improve this number.
 
@@ -83,5 +88,5 @@ I gained some insight into my demographics and factors for death. I have a prett
 
 Another thing to consider is not that I want to live grossly longer, but also maintain some quality of life in my old age. I think [#Other](my lack of exercise) does not help this at all. If I want to live longer, I need to take steps to ensure my old age is enjoyable. Anyone who's seen a documentary on longevity has heard that centenarians in various places (Italy, Greece, Japan) maintain some exercise, a good social life, and are vegetarian. While I haven't look for statistics to back this up, I think these are important not only for extending your lifetime, but also for enjoying your lifetime.
 
-ENBODY
+ENDBODY
 END
