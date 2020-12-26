@@ -1,0 +1,41 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+</head><body>
+
+<nav>
+
+<a href="/">Home</a>
+<a href="/articles">Article Index</a>
+<a href="/me/">About Me</a>
+
+</nav>
+
+
+<h1>Arch Linux</h1>
+
+Here is my ongoing experience with Arch Linux.
+
+
+<h2>Installation</h2>
+
+<p>Installation was relatively painless. I knew what I was doing at this point. The one thing that got me was that <code>dhcp</code> was not installed, so when I booted into the live system, I had no internet whatsoever, requiring me to go back into the live environment and troubleshoot. I also had trouble with deciding where to mount the EFI System partition, and my initial mountpoint ended up with grub not finding Arch Linux. Reminder: you should not mount the EFI partition directly onto /boot. Mount it onto /efi or something. </p><br>
+
+<h2>Customization</h2>
+
+I decided to go with a new window manager. I decided I wanted to write my own, as well. I first installed Qtile, found the default behavior unspeakably awful, and decided for XMonad. I don't know Haskell, but I figured out how to set up keybinds and such within a couple of days and got some 'sensible' ones configured. I like pacman, pretty fast and easy to use; not much to say there. I also haven't set up a dotfiles repository yet, but here's a short list of what I have installed:
+<ul>
+<li> Xorg</li>
+<li> Neovim</li>
+<li> XMonad</li>
+<li> fzf</li>
+<li> ripgrep</li>
+<li> Neofetch (for that sweet sweet karma)</li>
+<li> texlab</li>
+<li> tmux (new for me )</li>
+<li> Firefox</li>
+</ul>
+
+and a couple other odds and ends.
+
+</body>
+</html>
