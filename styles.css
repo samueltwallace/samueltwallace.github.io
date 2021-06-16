@@ -1,10 +1,13 @@
+/* Adapted from https://github.com/alphapapa/solarized-everything-css/blob/master/css/gruvbox/gruvbox-all-sites.css */
+
 body {
 	text-align:justify ;
 	text-justify:inter-word;
 	font-family:Utopia;
-	margin: 5% 10% ;
+	margin: 5% 15% ;
 	font-size:15pt ;
-	background-color:#FFFFFF;
+	background-color: #282828 !important;
+        color: #83a598 !important;
 	overflow:auto;
 }
 
@@ -12,7 +15,11 @@ body {
 div.sidenote {
 	float:right;
 	margin:0% 1%;
-	border: 2px solid black;
+	border: 2px solid #3c3836;
 	padding: 2% 2%;
 	max-width: 35%;
+}
+
+a {
+  color: #458588 !important;
 }
