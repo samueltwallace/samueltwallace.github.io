@@ -12,5 +12,7 @@
 
 [[./archlinux/]]
 
+[[./emacs/]]
+
 * Statistics
 [[./lifetime/]]

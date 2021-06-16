@@ -1,0 +1,27 @@
+#+TITLE: Emacs
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../../styles.css">
+
+My ongoing experience with Emacs.
+
+* My transition
+
+I used (Neo)vim for about a year. But then, as is the cause of all *-hopping, I got bored with it. It is good for navigating and manipulating text. But at some point, there comes a time for something more. I was allured by the promise of a single program for all text-centric operations.
+
+* What I wanted
+
+I think I needed something a little more dedicated for text editing. Something a little more robust. Not to critique *-vim too much, but it's a little too small for big editing task - and by editing tasks, I mean something that can parse and execute user-defined commands efficiently.
+
+I also wanted something that I can reach into the internals a littl more. I avoided Vimscript, but because it was a little opaque. Emacs Lisp, on the other hand, is more familiar and easier to pick up. I also like the easy documentation inside Emacs itself.
+
+* What I've gotten
+
+I have had a great experience. I like that Emacs buffers are persistent upon exiting, whereas in *-vim, you have to discard the whole thing if you want it off the screen.
+
+I also love Org mode. It's more feature-full than VimWiki, which I used for a while, and makes creating a website easy :).
+
+* What I want more of
+
+I want to reach into the internals and write a big config. I would also love to try loading more config as I go, in the 'layer' scheme.
+
+[[https://github.com/samueltwallace/archery-inspiron-dotfiles/blob/master/.emacs.d/init.el][my init.el]]
