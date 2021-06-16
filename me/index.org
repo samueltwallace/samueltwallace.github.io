@@ -86,12 +86,13 @@ Here are things I think other people should be exposed to.
 - Acts I-V of The Dear Hunter (Prog Rock/Metal)[[5]]
 - /The Mountain/ by Haken (Progressive Metal)
 
+
+** Recommended Visiting
+
 #+ATTR_HTML: :class sidenote
 #+BEGIN_div
 <<5>>  [[5]]"And all the lessons learned / Were they worth the ash from all the bridges burned?"
 #+END_div
-
-** Recommended Visiting
 
 - [[https://lobste.rs][Lobsters]]
 

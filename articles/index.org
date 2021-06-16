@@ -10,7 +10,7 @@
   
 [[./VoidLinux/]]
 
-[[./ArchLinux/]]
+[[./archlinux/]]
 
 * Statistics
 [[./lifetime/]]
