@@ -1,0 +1,34 @@
+#+TITLE: Keeping a Live Neofetch on GitHub
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../../styles.css">
+
+If you haven't been to my GitHub before, you won't have seen my [[https://github.com/samueltwallace/avoidance-inspiron-dotfiles][dotfiles repo]] before (or my old [[https://github.com/samueltwallace/dotfiles-inspiron/][Ubuntu Dotfiles]]). If you notice, I have a ~curl~-able neofetch of my system there. I have devised a way to keep it updated everytime I update my dotfiles, so no more manually updating the file, adding it to my bare git repository for my dotfiles, and then commiting and pushing. I used the magic of Git hooks to make it automatic.
+
+* Git Hooks
+
+Git hooks were something I did not know about until recently until I made a bare git repository and got into the guys of what typically goes into a .git folder. I saw this mysterious ~hooks~ folder and decided to investigate the folder with Google in another tab. After learning a little bit about them, I think this is the kind of thing that could be a major boost in my workflow. 
+
+Git hooks are scripts that execute when you execute git commands from the command line. This could be a commit, a push, merge, or a rebase, and could either be executed before or after the actions is taken. They are super easy to organize and use.
+
+All the scripts you want to happened go into the ~.git/hooks~ folder in the repo you want the scripts to activate for. Note that these scripts need to have special names, need to be executable, and only run on the machine that the folder is on (so if you push changes, the hooks won't be hooked!). Then you can write any script you want. The list of acceptable hook names are listed in an unmodified git directory in its hooks folder, but some examples include:
+
+- pre-commit
+- pre-merge-commit
+- prepare-commit-msg
+- pre-push
+
+* Updating my Neofetch file
+
+In my ~$HOME~, I have a file called ~neofetch~ that contains the output of ~date && neofetch~. I used to update this every so often when I committed my dotfiles by running ~echo "$(date && neofetch)" > $HOME/neofetch~ whenever I remembered to. I would then add the file to be committed, then commit and push.
+
+Now, I have a ~pre-commit~ hook that reads
+
+#+BEGIN_SRC
+#!/bin/bash
+
+echo "$(date && neofetch)" > $HOME/neofetch ==
+echo "Update neofetch file" ==
+git --git-dir=path/to/bare/repo --work-tree=$HOME add $HOME/neofetch ==
+#+END_SRC
+
+And now when I commit, it updates the Neofetch file and adds it to be committed, and it gets pushed in the commit. Now I never have to manually update this file. This simple example shows the power of Git hooks, and I'm going to start making them a common occurrence in my workflow.

@@ -1,99 +1,395 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
-<title>How long will I live?</title>
-<meta name="author" content="Sam Wallace">
-<meta name="description" content="My demographics, statistics, and my projected lifespan.">
-</head><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2021-06-16 Wed 08:15 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Long will I live?</title>
+<meta name="generator" content="Org mode">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
-<nav>
-
-<a href="/">Home</a>
-<a href="/articles">Article Index</a>
-<a href="/me/">About Me</a>
-
-</nav>
-
-
-<h1>How long will I live?</h1>
-
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../../styles.css">
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">How Long will I live?</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org58a7b9a">1. Methods and Data</a></li>
+<li><a href="#orge4cb26c">2. Basic Demographics</a></li>
+<li><a href="#org0f03114">3. Class Considerations</a></li>
+<li><a href="#org17d6d1d">4. Cause of Death</a></li>
+<li><a href="#org78e262f">5. Other Demographics</a></li>
+<li><a href="#orga04f2c4">6. Conclusions</a></li>
+</ul>
+</div>
+</div>
+<p>
 Probably a question on many people's mind. I'm going to dig into some fairly common statistics to get a rough idea for the answer. I'll also do a little research on how I can improve this number.
+</p>
 
 <hr>
 
 
-<h2 id="Methods"><a href="#Methods">Methods and Data</a></h2>
+<div id="outline-container-org58a7b9a" class="outline-2">
+<h2 id="org58a7b9a"><span class="section-number-2">1</span> Methods and Data</h2>
+<div class="outline-text-2" id="text-1">
+<div class="sidenote div" id="org9c1ddef">
+<p>
+<a href="#org346c1d4">1</a> <a id="org346c1d4"></a> Per <a href="https://www.wikiwand.com/en/Life_table">Wikipedia</a>, this is "a table which shows, for each age, what the probability is that a person of that age will die before their next birthday [&#x2026;] it represents the survivorship of people from a certain generation." It's a reference in the actuarial sciences to estimate prices of insurance products.
+</p>
 
-<div class="sidenote"><sup><a id="sidenote1">1</a></sup>Per <a href="https://www.wikiwand.com/en/Life_table">Wikipedia</a>, this is "a table which shows, for each age, what the probability is that a person of that age will die before their next birthday [...] it represents the survivorship of people from a certain generation." It's a reference in the actuarial sciences to estimate prices of insurance products.</div>
+</div>
 
-The main tool I'm going to be using to determine how long I will live is <em>actuarial tables</em><sup><a href="#sidenote1">1</a></sup>. There are several reasons I want to use this as a main reference:
-<ul>
-<li> They're backed up by data: Insurance companies keep track of this stuff in order to make money. And they're doing pretty well, so they must be doing something right.</li>
-<li> They're available: The US government and various actuarial institutes make past data available to the public, and making it easy for me to use as well.</li>
-<li> They're backed up by reliability: Insurance companies have been making a profit off this data for a while now, so they have learned to do the statistics right.</li>
+<p>
+The main tool I'm going to be using to determine how long I will live is <b>actuarial tables</b> <a href="#org346c1d4">1</a>. There are several reasons I want to use this as a main reference:
+</p>
+
+<ul class="org-ul">
+<li>They're backed up by data: Insurance companies keep track of this stuff in order to make money. And they're doing pretty well, so they must be doing something right.</li>
+<li>They're available: The US government and various actuarial institutes make past data available to the public, and making it easy for me to use as well.</li>
+<li>They're backed up by reliability: Insurance companies have been making a profit off this data for a while now, so they have learned to do the statistics right.</li>
 </ul>
-<p>Now I'm an applied math guy, and not a statistics guy, so I won't comment too heavily on the statistics. I can do some clever thinking about probability calculations, and that's about it. </p><br>
 
+<p>
+Now I'm an applied math guy, and not a statistics guy, so I won't comment too heavily on the statistics. I can do some clever thinking about probability calculations, and that's about it.
+</p>
+
+<p>
 My main source will be the <a href="https://www.soa.org/research/topics/research-emerging-topics/#population">Society of Actuaries' Research Page</a>, where there are convenient tools and calculators. 
+</p>
+</div>
+</div>
 
-<h2 id="Basic"><a href="#Basic">Basic Demographics</a></h2>
+<div id="outline-container-orge4cb26c" class="outline-2">
+<h2 id="orge4cb26c"><span class="section-number-2">2</span> Basic Demographics</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+The way you go through actuary tables is to specify demographics you belong to. So we'll start with the easy ones. I'm a male born in 1998, and I don't smoke, and I'm in pretty good health compared to the typical 23 year old. Let's see what we can get with that alone. 
+</p>
 
-<p>The way you go through actuary tables is to specify demographics you belong to. So we'll start with the easy ones. I'm a male born in 1998, and I don't smoke, and I'm in pretty good health compared to the typical 23 year old. Let's see what we can get with that alone. </p><br>
-
+<p>
 I used <a href="https://www.longevityillustrator.org/">a handy-dandy calculator</a> and saw that there was:
-<ul>
-<li> A 100% chance I live to my expected retirement age (65, just as a guess). This is always returned at 100% by the model.</li>
-<li> A 92% chance I live to 75</li>
-<li> A 73% chance I live to 85</li>
-<li> A 37% chance I live to 95</li>
-</ul>
-<p>And there's a handy graph at the bottom showing a logistic-like curve that tells me how long I have to live past my retirement age. </p><br>
+</p>
 
+<ul class="org-ul">
+<li>A 100% chance I live to my expected retirement age (65, just as a guess). This is always returned at 100% by the model.</li>
+<li>A 92% chance I live to 75</li>
+<li>A 73% chance I live to 85</li>
+<li>A 37% chance I live to 95</li>
+</ul>
+
+<p>
+And there's a handy graph at the bottom showing a logistic-like curve that tells me how long I have to live past my retirement age.
+</p>
+
+<p>
 This seems like a good first attempt with litle information about me. It gives me an expected age of 90. Not bad! But this is a pretty crude test, I think it would describe me and my roommates all pretty well, though I all doubt we live to 90. Let's try something more specific.
+</p>
+</div>
+</div>
 
-<h2 id="Class"><a href="#Class">Class Considerations</a></h2>
+<div id="outline-container-org0f03114" class="outline-2">
+<h2 id="org0f03114"><span class="section-number-2">3</span> Class Considerations</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+After I get out of school, I'm almost definitely going to be in a white-collar job. I come from a middle-class white family in the US. Let's see what we get from that.
+</p>
 
-<p>After I get out of school, I'm almost definitely going to be in a white-collar job. I come from a middle-class white family in the US. Let's see what we get from that. </p><br>
+<div class="sidenote div" id="orgc2d7e75">
+<p>
+<a href="#org7948916">3</a> <a id="org7948916"></a> Interestingly enough, there's a higher life expectancy for group insurance than individual insurance. Maybe group insurance comes with a good paying-job?
+</p>
 
-<div class="sidenote"><sup><a id="sidenote2">2</a></sup>Interestingly enough, there's a higher life expectancy for group insurance than individual insurance. Maybe group insurance comes with a good paying-job?</div>
-<ul>
-<li> Being on a group insurance plan (like one I am going to get from my future employer)<sup><a href="#sidenote2">2</a></sup></li>
-<li> On a private pension plan in a white-collar job, I have a 17% chance of living to 100</li>
+</div>
+
+
+<ul class="org-ul">
+<li>Being on a group insurance plan (like one I am going to get from my future employer)<a href="#org7948916">3</a></li>
+<li>On a private pension plan in a white-collar job, I have a 17% chance of living to 100</li>
 </ul>
+
+<p>
 Here's where the easy graphics and calculators end. Now I actually have to dig into <a href="https://stacks.cdc.gov/pdfjs/web/viewer.html?file=https://stacks.cdc.gov/view/cdc/78186/cdc_78186_DS1.pdf">a table</a>.
-<ul>
-<li> There was a less than 1% chance of me dying by 2001. That's nice to hear.</li>
-<li> I have a life expectancy of 77.6</li>
+</p>
+
+<ul class="org-ul">
+<li>There was a less than 1% chance of me dying by 2001. That's nice to hear.</li>
+<li>I have a life expectancy of 77.6</li>
 </ul>
+</div>
+</div>
 
-<h2 id="Death"><a href="#Death">Cause of Death</a></h2>
 
+<div id="outline-container-org17d6d1d" class="outline-2">
+<h2 id="org17d6d1d"><span class="section-number-2">4</span> Cause of Death</h2>
+<div class="outline-text-2" id="text-4">
+<p>
 I stumbled upon a chart of probability of dying from certain causes, grouped by age and race. You can take a look at the <a href="https://stacks.cdc.gov/pdfjs/web/viewer.html?file=https://stacks.cdc.gov/view/cdc/13714/cdc_13714_DS1.pdf">full table</a> yourself, but I'll report the interesting ones here:
-<ul>
-<li> 1.3% chance of dying by injury by firearms</li>
-<li> 1.5% chance of dying by suicide</li>
-<li> 1.1% chance of dying by septicemia</li>
-<li> 7.7% chance of dying by "acute myocardial infarction" (heart attack)</li>
-<li> 2.2% chance of dying by heart failure</li>
-<li> 4.0% chance of dying by accident</li>
-<li> 7.5% chance of dying by lung cancer</li>
+</p>
+
+<ul class="org-ul">
+<li>1.3% chance of dying by injury by firearms</li>
+<li>1.5% chance of dying by suicide</li>
+<li>1.1% chance of dying by septicemia</li>
+<li>7.7% chance of dying by "acute myocardial infarction" (heart attack)</li>
+<li>2.2% chance of dying by heart failure</li>
+<li>4.0% chance of dying by accident</li>
+<li>7.5% chance of dying by lung cancer</li>
 </ul>
+
+<p>
 These are pretty interesting. Health risks are the highest, especially heart problems, making an almost whopping 10% of my probable causes of death.
+</p>
+</div>
+</div>
 
-<h2 id="Other"><a href="#Other">Other Demographics</a></h2>
+<div id="outline-container-org78e262f" class="outline-2">
+<h2 id="org78e262f"><span class="section-number-2">5</span> Other Demographics</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+I don't work out hardly ever. Let's see what that tells us.
+</p>
 
-<p>I don't work out hardly ever. Let's see what that tells us. </p><br>
+<p>
+I will be looking at <a href="https://stacks.cdc.gov/pdfjs/web/viewer.html?file=https://stacks.cdc.gov/view/cdc/39302/cdc_39302_DS1.pdf">This study</a> which relates physical activity to "health-related quality of life" - an amalgamation of some self-reported measures of health. The authors measured HRQOL by two questions, "Now thinking about your physical health, which includes physical illness and injury, for how many days during hte past 30 days was your physical health not good?" and "Now thinking about  your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 was your mental health not good?"
+</p>
 
-<p>I will be looking at <a href="https://stacks.cdc.gov/pdfjs/web/viewer.html?file=https://stacks.cdc.gov/view/cdc/39302/cdc_39302_DS1.pdf">This study</a> which relates physical activity to "health-related quality of life" - an amalgamation of some self-reported measures of health. The authors measured HRQOL by two questions, "Now thinking about your physical health, which includes physical illness and injury, for how many days during hte past 30 days was your physical health not good?" and "Now thinking about  your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 was your mental health not good?" </p><br>
+<p>
+And survey says&#x2026; I'm at a highest risk for a stretch of bad health at least 14 days, at about 16%.
+</p>
+</div>
+</div>
 
-And survey says... I'm at a highest risk for a stretch of bad health at least 14 days, at about 16%.
+<div id="outline-container-orga04f2c4" class="outline-2">
+<h2 id="orga04f2c4"><span class="section-number-2">6</span> Conclusions</h2>
+<div class="outline-text-2" id="text-6">
+<div class="sidenote div" id="orge18d420">
+<p>
+<a href="#org59528bd">6</a> <a id="org59528bd"></a> This study also comments that past studies on this topic ignore the fact that genetic similarities often arise between spouses. This may be a more significant factor than others. They also comment on the transferral of socioeconomic resources in a marriage, and how that may contribute to increased longevity.
+</p>
 
-<h2 id="Conclusions"><a href="#Conclusions">Conclusions</a></h2>
+</div>
 
-<div class="sidenote"><sup><a id="sidenote3">3</a></sup>This study also comments that past studies on this topic ignore the fact that genetic similarities often arise between spouses. This may be a more significant factor than others. They also comment on the transferral of socioeconomic resources in a marriage, and how that may contribute to increased longevity.</div>
+<p>
+I gained some insight into my demographics and factors for death. I have a pretty good life expectancy (80+), supported by my anecdotal grandparents' ages (90+). Though this may not be true, as <a href="https://www.genetics.org/content/210/3/1109.figures-only">spousal lifespan has a higher correlation with your own lifespan than your blood family's</a> <a href="#org59528bd">6</a>. So maybe I should marry someone with a long projected life span rather than depending on my genes. 
+</p>
 
-<p>I gained some insight into my demographics and factors for death. I have a pretty good life expectancy (80+), supported by my anecdotal grandparents' ages (90+). Though this may not be true, as <a href="https://www.genetics.org/content/210/3/1109.figures-only">spousal lifespan has a higher correlation with your own lifespan than your blood family's</a><sup><a href="#sidenote3">3</a></sup>. So maybe I should marry someone with a long projected life span rather than depending on my genes. </p><br>
-
-Another thing to consider is not that I want to live grossly longer, but also maintain some quality of life in my old age. I think <a href="#Other">my lack of exercise</a> does not help this at all. If I want to live longer, I need to take steps to ensure my old age is enjoyable. Anyone who's seen a documentary on longevity has heard that centenarians in various places (Italy, Greece, Japan) maintain some exercise, a good social life, and are vegetarian. While I haven't look for statistics to back this up, I think these are important not only for extending your lifetime, but also for enjoying your lifetime.
-
+<p>
+Another thing to consider is not that I want to live grossly longer, but also maintain some quality of life in my old age. I think <a href="#org78e262f">my lack of exercise</a> does not help this at all. If I want to live longer, I need to take steps to ensure my old age is enjoyable. Anyone who's seen a documentary on longevity has heard that centenarians in various places (Italy, Greece, Japan) maintain some exercise, a good social life, and are vegetarian. While I haven't look for statistics to back this up, I think these are important not only for extending your lifetime, but also for enjoying your lifetime.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2021-06-16 Wed 08:15</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
 </body>
 </html>

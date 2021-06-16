@@ -1,0 +1,137 @@
+#+TITLE: About Sam
+#+Author: Samuel T. Wallace
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../styles.css" />
+
+
+* Short Bio
+
+I am a full-time mathematics student, as well as an after-hours programmer.
+
+- [[https://github.com/samueltwallace][My GitHub]]
+- my email: samueltwallace at gmail . com
+- [[./samuel.wallace.gpg][PGP Key]]
+
+I am generally interested:
+
+- Math
+- Physics
+- Computing and Coding
+
+
+-----
+
+
+* My Recommandations
+
+Here are things I think other people should be exposed to.
+
+** Recommended Reading 
+
+#+ATTR_HTML: :class sidenote
+#+BEGIN_div
+<<1>> [[1]]"Deep in the human unconscious is a pervasive need for a logical universe that makes sense. But the real universe is always one step beyond logic."
+#+END_div
+
+
+- /Procession of the Black Sloth/ by Laird Barron (Horror)
+- /The Frolic/ by Thomas Ligotti (Horror)
+- /The Last Feast of the Harlequin/ by Thomas Ligotti (Horror)
+- /The Troubles of Dr. Thoss/ by Thomas Ligotti (Horror)
+- /Foundation/ Trilogy by Isaac Asimov (Far Future Sci-fi, society, history, technology)
+- Most anything by Stephen King (Horror, the human experience)
+
+#+ATTR_HTML: :class sidenote
+#+BEGIN_div
+<<2>> [[2]]"The more civilized a nation, the more conformed its population, until that civilization's last age arrives, when multiplicity wages war with conformity. The former grows ever wilder, ever more dysfunctional in its extremities; whilst the latter seeks to increase its measure of control, until such efforts acquire diabolical tyranny."
+#+END_div
+
+** Required Reading
+
+- /Dune/ by Frank Herbert (Far-future Sci-fi, worldbuilding, cultures/society)[[1]]
+- /Malazan Book of the Fallen/ by Steven Erickson (High fantasy, wordbuilding, politics, power, religion, history, truth)[[2]]
+- /Prose Edda/ by Snori Sturlusson (History, mythology, anthropology)
+- /The Call of Cthulhu/ by H.P. Lovecraft (horror)[[3]]
+
+
+** Recommended Watching
+
+
+- /A Beautiful Mind/
+- /Shawshank Redemption/
+- /Howl's Moving Castle/
+
+#+ATTR_HTML: :class sidenote
+#+BEGIN_div
+<<3>> [[3]]"We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far."
+#+END_div
+
+** Recommended Listening
+
+- /Soon it will be Cold Enough/ by Emancipator (New Age, Instrumental, Chill)
+- /Late Registration/ by Kanye West (Hip hop)
+- /Tetsuo and Youth/ by Lupe Fiasco (Hip hop)
+- /Worlds/ by Porter Robinson (Electronic)
+
+#+ATTR_HTML: :class sidenote
+#+BEGIN_div
+<<4>> [[4]]"Did you ever wonder why we had to run for shelter when the promise of a brave new world unfurled beneath a clear blue sky?"
+#+END_div
+
+
+** Required Listening
+
+- /The Wall/ by Pink Floyd (Prog/Classic Rock)[[4]]
+- /Bloom/ by Caligula's Horse (Progressive Metal)
+- Acts I-V of The Dear Hunter (Prog Rock/Metal)[[5]]
+- /The Mountain/ by Haken (Progressive Metal)
+
+#+ATTR_HTML: :class sidenote
+#+BEGIN_div
+<<5>>  [[5]]"And all the lessons learned / Were they worth the ash from all the bridges burned?"
+#+END_div
+
+** Recommended Visiting
+
+- [[https://lobste.rs][Lobsters]]
+
+
+** Required Visiting
+
+- [[https://lesswrong.com/codex][Less Wrong's The Codex]]
+
+
+* Math
+
+I am currently interested in the following:
+
+- Partial Differential Equations
+- Functional Analysis
+- Variational Problems and Elasticity
+
+I consider myself laragely an applied mathematician.
+
+** Math Links
+
+- [[https://www.uni-muenster.de/Physik.TP/~munsteg/arnold.html][On Teaching Mathematics,]] by Vladimir Arnold
+
+* Coding
+
+I have coded in the following languages (listed in the order I remember them):
+
+- Java
+- Python
+- C
+- Go
+- MATLAB
+- Julia
+
+I wouldn't call myself proficient in any particular language; I don't often stick on one language enough to know it very well (which is a flaw in my learning pattern). I code for fun, and for work (summer internship).
+
+* Workstation, Workflow, and Machines
+
+I currently do everything off two laptops (one for work, one for personal). They are both 5+ years old, and run great. I use an Ergodox keyboard and a Ducky One Mini 2 when I need it. I also have a Kenting writing tablet for the online teaching I did.
+
+On my personal laptop, I use XMonad (though I know very little Haskell) and do text editing in Emacs. On my work machine, I use spectrwm and again Emacs. Both run Arch Linux, and my personal laptop runs Windows as well.
+
+

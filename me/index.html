@@ -1,165 +1,475 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2021-06-16 Wed 07:54 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About Sam</title>
+<meta name="generator" content="Org mode">
 <meta name="author" content="Samuel T. Wallace">
-<meta name="description" content="More than you wanted to know about me.">
-</head><body>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
-<nav>
-
-<a href="/">Home</a>
-<a href="/articles">Article Index</a>
-<a href="/me/">About Me</a>
-
-</nav>
-
-
-
-I am a full-time mathematics student, as well as a part-time programmer and part-time rationalist.
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../styles.css" />
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">About Sam</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
 <ul>
-<li> <a href="https://github.com/samueltwallace">My GitHub</a></li>
-<li> my email: samueltwallace at gmail . com</li>
-<li> <a href="samuel.wallace.gpg">PGP Key</a></li>
-</ul>
-I am generally interested in:
+<li><a href="#org20c66b7">1. Short Bio</a></li>
+<li><a href="#orgcab6077">2. My Recommandations</a>
 <ul>
-<li> Math</li>
-<li> Computing and Coding</li>
+<li><a href="#orgfd70867">2.1. Recommended Reading</a></li>
+<li><a href="#org4ae52bb">2.2. Required Reading</a></li>
+<li><a href="#org5fbd6f9">2.3. Recommended Watching</a></li>
+<li><a href="#orga1bdbd1">2.4. Recommended Listening</a></li>
+<li><a href="#org1ab4c94">2.5. Required Listening</a></li>
+<li><a href="#org3fa5ab5">2.6. Recommended Visiting</a></li>
+<li><a href="#org6191016">2.7. Required Visiting</a></li>
 </ul>
-I have some to mild interest in:
+</li>
+<li><a href="#org98388b8">3. Math</a>
 <ul>
-<li> Psychology</li>
-<li> Biology</li>
+<li><a href="#org85bf2e7">3.1. Math Links</a></li>
 </ul>
-<p class="left">The Rest of this page: </p>
+</li>
+<li><a href="#org04d93d2">4. Coding</a></li>
+<li><a href="#org0d97bd2">5. Workstation, Workflow, and Machines</a></li>
+</ul>
+</div>
+</div>
 
-<ol>
-<li><a href="index.html#Reading">Recommended Reading</a><br></li>
-<li><a href="index.html#Watching">Recommended Watching</a><br></li>
-<li><a href="index.html#Listening">Recommended Listening</a><br></li>
-<li><a href="index.html#Visiting">Recommended Visiting</a><br></li>
-<li><a href="index.html#Math">Math</a><br></li>
-<li><a href="index.html#Coding">Coding</a><br></li>
-<li><a href="index.html#Workstation">Workstation, Workflow, and Machines</a><br></li>
-<li><a href="index.html#Personal">Personal</a><br></li>
-</ol>
+
+<div id="outline-container-org20c66b7" class="outline-2">
+<h2 id="org20c66b7"><span class="section-number-2">1</span> Short Bio</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+I am a full-time mathematics student, as well as an after-hours programmer.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://github.com/samueltwallace">My GitHub</a></li>
+<li>my email: samueltwallace at gmail . com</li>
+<li><a href="./samuel.wallace.gpg">PGP Key</a></li>
+</ul>
+
+<p>
+I am generally interested:
+</p>
+
+<ul class="org-ul">
+<li>Math</li>
+<li>Physics</li>
+<li>Computing and Coding</li>
+</ul>
+
 
 <hr>
-<h1>My Recommendations</h1>
+</div>
+</div>
 
+
+<div id="outline-container-orgcab6077" class="outline-2">
+<h2 id="orgcab6077"><span class="section-number-2">2</span> My Recommandations</h2>
+<div class="outline-text-2" id="text-2">
+<p>
 Here are things I think other people should be exposed to.
+</p>
+</div>
 
-<h2 id="Reading"><a href="#Reading">Recommended Reading</a></h2>
+<div id="outline-container-orgfd70867" class="outline-3">
+<h3 id="orgfd70867"><span class="section-number-3">2.1</span> Recommended Reading</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="sidenote div" id="org9abe616">
+<p>
+<a id="org9b5db24"></a> <a href="#org9b5db24">2.1</a>"Deep in the human unconscious is a pervasive need for a logical universe that makes sense. But the real universe is always one step beyond logic."
+</p>
 
-<div class="sidenote"><sup><a id="sidenote1">1</a></sup>"Deep in the human unconscious is a pervasive need for a logical universe that makes sense. But the real universe is always one step beyond logic."</div>
-<ul>
-<li> <em>The Procession of the Black Sloth</em> by Laird Barron (Horror)</li>
-<li> <em>The Frolic</em> by Thomas Ligotti (Horror)</li>
-<li> <em>The Last Feast of the Harlequin</em> by Thomas Ligotti (Horror)</li>
-<li> <em>The Troubles of Dr. Thoss</em> by Thomas Ligotti (Horror)</li>
-<li> <em>Foundation</em> Trilogy by Isaac Asimov (Far Future Sci-fi, society, history, technology)</li>
-<li> Most anything by Stephen King (Horror, the human experience)</li>
-</ul>
-<div class="sidenote"><sup><a id="sidenote2">2</a></sup>"The more civilized a nation, the more conformed its population, until that civilization's last age arrives, when multiplicity wages war with conformity. The former grows ever wilder, ever more dysfunctional in its extremities; whilst the latter seeks to increase its measure of control, until such efforts acquire diabolical tyranny."</div>
-
-<h3>Required Reading</h3>
-
-<ul>
-<li> <em>Dune</em> by Frank Herbert (Far-future Sci-fi, worldbuilding, cultures/society)<sup><a href="#sidenote1">1</a></sup></li>
-<li> <em>Malazan Book of the Fallen</em> by Steven Erickson (High fantasy, wordbuilding, politics, power, religion, history, truth)<sup><a href="#sidenote2">2</a></sup></li>
-<li> <em>Prose Edda</em> by Snori Sturlusson (History, mythology, anthropology)</li>
-<li> <em>The Call of Cthulhu</em> by H.P. Lovecraft (horror)<sup><a href="#sidenote3">3</a></sup></li>
-<li> <em>Psychological Types</em> by Carl Jung (Psychology, personality)</li>
-</ul>
-<div class="sidenote"><sup><a id="sidenote3">3</a></sup>"We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far."</div>
+</div>
 
 
-<h2 id="Watching"><a href="#Watching">Recommended Watching</a></h2>
-<ul>
-<li> <em>A Beautiful Mind</em></li>
-<li> <em>Shawshank Redemption</em></li>
-<li> <em>Howl's Moving Castle</em></li>
+<ul class="org-ul">
+<li><i>Procession of the Black Sloth</i> by Laird Barron (Horror)</li>
+<li><i>The Frolic</i> by Thomas Ligotti (Horror)</li>
+<li><i>The Last Feast of the Harlequin</i> by Thomas Ligotti (Horror)</li>
+<li><i>The Troubles of Dr. Thoss</i> by Thomas Ligotti (Horror)</li>
+<li><i>Foundation</i> Trilogy by Isaac Asimov (Far Future Sci-fi, society, history, technology)</li>
+<li>Most anything by Stephen King (Horror, the human experience)</li>
 </ul>
 
-<h2 id="Listening"><a href="#Listening">Recommended Listening</a></h2>
-<ul>
-<li> <em>Soon it will be Cold Enough</em> by Emancipator (New Age, Instrumental, Chill)</li>
-<li> <em>Late Registration</em> by Kanye West (Hip Hop)</li>
-<li> <em>Tetsuo and Youth</em> by Lupe Fiasco (Hip Hop)</li>
-<li> <em>Worlds</em> by Porter Robinson (Electronic)</li>
-</ul>
-<div class="sidenote"><sup><a id="sidenote4">4</a></sup>"Did you ever wonder why we had to run for shelter when the promise of a brave new world unfurled beneath a clear blue sky?"</div>
+<div class="sidenote div" id="orge7f9043">
+<p>
+<a id="orgb8c3cd0"></a> <a href="#orgb8c3cd0">2.1</a>"The more civilized a nation, the more conformed its population, until that civilization's last age arrives, when multiplicity wages war with conformity. The former grows ever wilder, ever more dysfunctional in its extremities; whilst the latter seeks to increase its measure of control, until such efforts acquire diabolical tyranny."
+</p>
 
-<h3>Required Listening</h3>
-<ul>
-<li> <em>The Wall</em> by Pink Floyd (Prog/Classic Rock)<sup><a href="#sidenote4">4</a></sup></li>
-<li> <em>Bloom</em> by Caligula's Horse (Progressive Metal)</li>
-<li> Acts I-V of The Dear Hunter (Prog Rock/Metal)<sup><a href="#sidenote5">5</a></sup></li>
-<li> <em>The Mountain</em> by Haken (Progressive Metal)</li>
-</ul>
-<div class="sidenote"><sup><a id="sidenote5">5</a></sup>"And all the lessons learned / Were they worth the ash from all the bridges burned?"</div>
+</div>
+</div>
+</div>
 
-<h2 id="Visiting"><a href="#Visiting">Recommended Visiting</a></h2>
-<ul>
-<li> <a href="https://lobste.rs">Lobsters</a></li>
+<div id="outline-container-org4ae52bb" class="outline-3">
+<h3 id="org4ae52bb"><span class="section-number-3">2.2</span> Required Reading</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li><i>Dune</i> by Frank Herbert (Far-future Sci-fi, worldbuilding, cultures/society)<a href="#org9b5db24">2.1</a></li>
+<li><i>Malazan Book of the Fallen</i> by Steven Erickson (High fantasy, wordbuilding, politics, power, religion, history, truth)<a href="#orgb8c3cd0">2.1</a></li>
+<li><i>Prose Edda</i> by Snori Sturlusson (History, mythology, anthropology)</li>
+<li><i>The Call of Cthulhu</i> by H.P. Lovecraft (horror)<a href="#org9933ccd">2.3</a></li>
 </ul>
-<h3>Required Visiting</h3>
-<ul>
-<li> <a href="https://lesswrong.com/codex">Less Wrong's the Codex</a></li>
-</ul>
-<h1 id="Math"><a href="#Math">Math</a></h1>
+</div>
+</div>
 
+
+<div id="outline-container-org5fbd6f9" class="outline-3">
+<h3 id="org5fbd6f9"><span class="section-number-3">2.3</span> Recommended Watching</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li><i>A Beautiful Mind</i></li>
+<li><i>Shawshank Redemption</i></li>
+<li><i>Howl's Moving Castle</i></li>
+</ul>
+
+<div class="sidenote div" id="org2a84aeb">
+<p>
+<a id="org9933ccd"></a> <a href="#org9933ccd">2.3</a>"We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far."
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga1bdbd1" class="outline-3">
+<h3 id="orga1bdbd1"><span class="section-number-3">2.4</span> Recommended Listening</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li><i>Soon it will be Cold Enough</i> by Emancipator (New Age, Instrumental, Chill)</li>
+<li><i>Late Registration</i> by Kanye West (Hip hop)</li>
+<li><i>Tetsuo and Youth</i> by Lupe Fiasco (Hip hop)</li>
+<li><i>Worlds</i> by Porter Robinson (Electronic)</li>
+</ul>
+
+<div class="sidenote div" id="org86fa7a0">
+<p>
+<a id="orgdf4583a"></a> <a href="#orgdf4583a">2.4</a>"Did you ever wonder why we had to run for shelter when the promise of a brave new world unfurled beneath a clear blue sky?"
+</p>
+
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org1ab4c94" class="outline-3">
+<h3 id="org1ab4c94"><span class="section-number-3">2.5</span> Required Listening</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li><i>The Wall</i> by Pink Floyd (Prog/Classic Rock)<a href="#orgdf4583a">2.4</a></li>
+<li><i>Bloom</i> by Caligula's Horse (Progressive Metal)</li>
+<li>Acts I-V of The Dear Hunter (Prog Rock/Metal)<a href="#orgffec080">2.5</a></li>
+<li><i>The Mountain</i> by Haken (Progressive Metal)</li>
+</ul>
+
+<div class="sidenote div" id="org9dbd747">
+<p>
+<a id="orgffec080"></a>  <a href="#orgffec080">2.5</a>"And all the lessons learned / Were they worth the ash from all the bridges burned?"
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3fa5ab5" class="outline-3">
+<h3 id="org3fa5ab5"><span class="section-number-3">2.6</span> Recommended Visiting</h3>
+<div class="outline-text-3" id="text-2-6">
+<ul class="org-ul">
+<li><a href="https://lobste.rs">Lobsters</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org6191016" class="outline-3">
+<h3 id="org6191016"><span class="section-number-3">2.7</span> Required Visiting</h3>
+<div class="outline-text-3" id="text-2-7">
+<ul class="org-ul">
+<li><a href="https://lesswrong.com/codex">Less Wrong's The Codex</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org98388b8" class="outline-2">
+<h2 id="org98388b8"><span class="section-number-2">3</span> Math</h2>
+<div class="outline-text-2" id="text-3">
+<p>
 I am currently interested in the following:
-<ul>
-<li> Partial Differential Equations</li>
-<li> Functional Analysis</li>
-<li> Variational Problems and Gamma Convergence</li>
-</ul>
-<p>I started studying these Aug 2020 as I entered grad school. </p><br>
+</p>
 
-I have been interested in the following: 
-<ul>
-<li> Differential Geometry</li>
-<li> Dynamical systems (Hamiltonian Dynamics)</li>
-<li> Lie Theory</li>
+<ul class="org-ul">
+<li>Partial Differential Equations</li>
+<li>Functional Analysis</li>
+<li>Variational Problems and Elasticity</li>
 </ul>
-<p>I did an independent study on Hamiltonian dynamics in my second-to-last semester of undergrad and that was the last time I studied these topics. </p><br>
 
-Math Links:
-<ul>
-<li> <a href="https://www.uni-muenster.de/Physik.TP/~munsteg/arnold.html">On Teaching Mathematics, </a> by Vladimir Arnold</li>
+<p>
+I consider myself laragely an applied mathematician.
+</p>
+</div>
+
+<div id="outline-container-org85bf2e7" class="outline-3">
+<h3 id="org85bf2e7"><span class="section-number-3">3.1</span> Math Links</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li><a href="https://www.uni-muenster.de/Physik.TP/~munsteg/arnold.html">On Teaching Mathematics,</a> by Vladimir Arnold</li>
 </ul>
-<h1 id="Coding"><a href="#Coding">Coding</a></h1>
+</div>
+</div>
+</div>
 
+<div id="outline-container-org04d93d2" class="outline-2">
+<h2 id="org04d93d2"><span class="section-number-2">4</span> Coding</h2>
+<div class="outline-text-2" id="text-4">
+<p>
 I have coded in the following languages (listed in the order I remember them):
-<ul>
-<li> Java</li>
-<li> Python</li>
-<li> C</li>
-<li> Go</li>
-<li> MATLAB</li>
-<li> Julia</li>
+</p>
+
+<ul class="org-ul">
+<li>Java</li>
+<li>Python</li>
+<li>C</li>
+<li>Go</li>
+<li>MATLAB</li>
+<li>Julia</li>
 </ul>
-<p>I wouldn't call myself proficient in any particular language; I don't often stick on one language enough to know it very well (which is a flaw in my learning pattern). I code for fun, (currently) not for work or any paid ventures, or really any ventures other than my own personal use. I prefer object-oriented programming, I think it gives more structure to a program and it eases my own thinking about the organization and flow of a program. </p><br>
 
-Many professional coders refer to themselves as engineers; I do not like that term. I think coders range in expertise and skills, and do not work (generally) on public infrastructure. Essentially, the reasons for a lack of <a href="https://www.wikiwand.com/en/Principles_and_Practice_of_Engineering_Examination">Professional Engineer's exam</a> and its enforcement speak to my main points: there is no oversight on the projects professional coders work on. This oversight is important for ensuring engineers put out services in the public's interest. I don't consider professional coders engineers because of the lack of oversight.
+<p>
+I wouldn't call myself proficient in any particular language; I don't often stick on one language enough to know it very well (which is a flaw in my learning pattern). I code for fun, and for work (summer internship).
+</p>
+</div>
+</div>
 
-<h1 id="Workstation"><a href="#Workstation">Workstation, Workflow, and Machines</a></h1>
+<div id="outline-container-org0d97bd2" class="outline-2">
+<h2 id="org0d97bd2"><span class="section-number-2">5</span> Workstation, Workflow, and Machines</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+I currently do everything off two laptops (one for work, one for personal). They are both 5+ years old, and run great. I use an Ergodox keyboard and a Ducky One Mini 2 when I need it. I also have a Kenting writing tablet for the online teaching I did.
+</p>
 
-<p>I am currently doing everything off of a laptop. It is a Dell Inspiron 15 5000 Series, it is 5 years old, and runs like a charm with some operating system tweaks. I have an HP monitor and a Ducky One Mini 2 Keyboard (though I will be building a new one soon). I dual boot Windows 10 and <a href="/articles/ArchLinux">Arch Linux</a>. I also have a Kenting writing tablet when I teach. </p><br>
-
-I use XMonad (though I don't know hardly any Haskell) as a window manager and do my text editing in NeoVim. I have a different <code>init.vim</code> for each type of file, to avoid loading plugins I don't need for a particular file. I have aliased all of this in my <code>.zshrc</code>. It doesn't improve performance by a super noticeable amount, but it helps me keep straight what plugins do what. 
-
- I also have another machine that serves as a personal server I use on my wireless network for file storage and long-running processes. It is an old laptop of my sister's, a Toshiba Satellite. I currently run a personal archive of (semi-illegally) downloaded paper and textbook PDFs served over Nginx. I am planning on changing operating systems on this machine from the current Void Linux to FreeBSD (for reasons that I will share soon).
-
-
-<h1 id="Personal"><a href="#Personal">Personal</a></h1>
-
-Here are some results from self-assessments I have taken. How much you credit these tests is up to you, though I definitely think that they do something, even if it's not what they say they do. However, my disclaimer is that if you look at these results and think you know me, you're almost definitely wrong.
-<ul>
-<li> MBTI: INTJ</li>
-<li> Big Five: 75% O, 50% C, 13% E, 25% A, 63% N</li>
-<li> Political Compass: Economic Left/Right: -4.38 (overall on the left) Social Libertarian/Authoritarian: -5.64 (Overall on the libertarian); this is closest to Gandhi.</li>
-</ul>
+<p>
+On my personal laptop, I use XMonad (though I know very little Haskell) and do text editing in Emacs. On my work machine, I use spectrwm and again Emacs. Both run Arch Linux, and my personal laptop runs Windows as well.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Samuel T. Wallace</p>
+<p class="date">Created: 2021-06-16 Wed 07:54</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
 </body>
 </html>

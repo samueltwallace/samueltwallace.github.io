@@ -1,53 +1,287 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
-<title>Live Neofetch on GitHub</title>
-<meta name="author" content="Samuel T. Wallace">
-<meta name="description" content="How I keep an (almost) live record of my neofetch on GitHub.">
-</head><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2021-06-15 Tue 23:49 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keeping a Live Neofetch on GitHub</title>
+<meta name="generator" content="Org mode">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
-<nav>
-
-<a href="/">Home</a>
-<a href="/articles">Article Index</a>
-<a href="/me/">About Me</a>
-
-</nav>
-
-
-<p>This is a legacy post kept for posterity. </p><br>
-
-<hr>
-
-If you haven't been to my GitHub before, you won't have seen my <a href="dotfiles repo">https://github.com/samueltwallace/avoidance-inspiron-dotfiles/</a> before (or my old <a href="Ubuntu dotfiles">https://github.com/samueltwallace/dotfiles-inspiron/</a>). If you notice, I have a <code>curl</code>-able neofetch of my system there. I have devised a way to keep it updated everytime I update my dotfiles, so no more manually updating the file, adding it to my bare git repository for my dotfiles, and then commiting and pushing. I used the magic of Git hooks to make it automatic.
-
-<h2>Git Hooks</h2>
-
-Git hooks were something I did not know about until recently until I made a bare git repository and got into the guys of what typically goes into a .git folder. I saw this mysterious <code>hooks</code> folder and decided to investigate the folder with Google in another tab. After learning a little bit about them, I think this is the kind of thing that could be a major boost in my workflow. 
-
-Git hooks are scripts that execute when you execute git commands from the command line. This could be a commit, a push, merge, or a rebase, and could either be executed before or after the actions is taken. They are super easy to organize and use.
-
-All the scripts you want to happened go into the <code>.git/hooks</code> folder in the repo you want the scripts to activate for. Note that these scripts need to have special names, need to be executable, and only run on the machine that the folder is on (so if you push changes, the hooks won't be hooked!). Then you can write any script you want. The list of acceptable hook names are listed in an unmodified git directory in its hooks folder, but some examples include:
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../../styles.css">
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Keeping a Live Neofetch on GitHub</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
 <ul>
-<li> pre-commit</li>
-<li> pre-merge-commit</li>
-<li> prepare-commit-msg</li>
-<li> pre-push</li>
+<li><a href="#org03de1d1">1. Git Hooks</a></li>
+<li><a href="#orga400392">2. Updating my Neofetch file</a></li>
 </ul>
-<h2>Updating my Neofetch file</h2>
+</div>
+</div>
+<p>
+If you haven't been to my GitHub before, you won't have seen my <a href="https://github.com/samueltwallace/avoidance-inspiron-dotfiles">dotfiles repo</a> before (or my old <a href="https://github.com/samueltwallace/dotfiles-inspiron/">Ubuntu Dotfiles</a>). If you notice, I have a <code>curl</code>-able neofetch of my system there. I have devised a way to keep it updated everytime I update my dotfiles, so no more manually updating the file, adding it to my bare git repository for my dotfiles, and then commiting and pushing. I used the magic of Git hooks to make it automatic.
+</p>
 
-In my ~, I have a file called <code>neofetch</code> that contains the output of <code>date && neofetch</code>. I used to update this every so often when I committed my dotfiles by running <code>echo "$(date && neofetch)" > $HOME/neofetch</code> whenever I remembered to. I would then add the file to be committed, then commit and push.
+<div id="outline-container-org03de1d1" class="outline-2">
+<h2 id="org03de1d1"><span class="section-number-2">1</span> Git Hooks</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Git hooks were something I did not know about until recently until I made a bare git repository and got into the guys of what typically goes into a .git folder. I saw this mysterious <code>hooks</code> folder and decided to investigate the folder with Google in another tab. After learning a little bit about them, I think this is the kind of thing that could be a major boost in my workflow. 
+</p>
 
+<p>
+Git hooks are scripts that execute when you execute git commands from the command line. This could be a commit, a push, merge, or a rebase, and could either be executed before or after the actions is taken. They are super easy to organize and use.
+</p>
+
+<p>
+All the scripts you want to happened go into the <code>.git/hooks</code> folder in the repo you want the scripts to activate for. Note that these scripts need to have special names, need to be executable, and only run on the machine that the folder is on (so if you push changes, the hooks won't be hooked!). Then you can write any script you want. The list of acceptable hook names are listed in an unmodified git directory in its hooks folder, but some examples include:
+</p>
+
+<ul class="org-ul">
+<li>pre-commit</li>
+<li>pre-merge-commit</li>
+<li>prepare-commit-msg</li>
+<li>pre-push</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga400392" class="outline-2">
+<h2 id="orga400392"><span class="section-number-2">2</span> Updating my Neofetch file</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+In my <code>$HOME</code>, I have a file called <code>neofetch</code> that contains the output of <code>date &amp;&amp; neofetch</code>. I used to update this every so often when I committed my dotfiles by running <code>echo "$(date &amp;&amp; neofetch)" &gt; $HOME/neofetch</code> whenever I remembered to. I would then add the file to be committed, then commit and push.
+</p>
+
+<p>
 Now, I have a <code>pre-commit</code> hook that reads
+</p>
 
-<div class="codeblock"><pre>
-<p>#!/bin/bash </p><br>
-<p> </p><br>
-<p>echo "$(date && neofetch)" > $HOME/neofetch </p><br>
-<p>echo "Update neofetch file" </p><br>
-<p>git --git-dir=path/to/bare/repo --work-tree=$HOME add $HOME/neofetch </p><br>
-</pre></div>
+<pre class="example">
+#!/bin/bash
+
+echo "$(date &amp;&amp; neofetch)" &gt; $HOME/neofetch ==
+echo "Update neofetch file" ==
+git --git-dir=path/to/bare/repo --work-tree=$HOME add $HOME/neofetch ==
+</pre>
+
+<p>
 And now when I commit, it updates the Neofetch file and adds it to be committed, and it gets pushed in the commit. Now I never have to manually update this file. This simple example shows the power of Git hooks, and I'm going to start making them a common occurrence in my workflow.
-
-
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2021-06-15 Tue 23:49</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
 </body>
 </html>

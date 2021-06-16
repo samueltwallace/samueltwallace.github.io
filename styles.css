@@ -8,59 +8,10 @@ body {
 	overflow:auto;
 }
 
-h1 {
-	font-size: 30pt;
-}
-
-p.left {
-	text-align:left ;
-}
-
-p.right {
-	text-align:right ;
-}
-
-ul {
-	margin: 1% 5%;
-}
-
-ul li{
-	text-align:left;
-}
-
-div.codeblock {
-	margin: 1% 25%;
-	background-color:#BDBFBA;
-	font-family:monospace;
-	text-align:left;
-	border-radius:10px;
-}
-nav {
-	justify-content:space-around;
-	flex-direction:row;
-	border:2px solid black;
-	margin: 2% 0%;
-	padding: 2% 2%;
-	top: 0;
-	background-color:inherit;
-	display:flex;
-}
 
 div.sidenote {
 	float:right;
 	margin:0% 1%;
-	border: 2px solid black;
-	padding: 2% 2%;
-	max-width: 35%;
-}
-
-a {
-	color:#636363;
-}
-
-iframe {
-	float:right;
-	margin:1% 5%;
 	border: 2px solid black;
 	padding: 2% 2%;
 	max-width: 35%;

@@ -1,0 +1,30 @@
+#+TITLE: Homepage
+#+AUTHOR: Samuel T. Wallace
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles.css" />
+
+
+#+BEGIN_CENTER
+{{{author}}}
+
+
+This is the personal homepage of Sam Wallace. This is to be a personal and public record of my interests, projects, and thoughts. If I did it, it should show up here.
+
+
+
+There are several places to go from here. You can take a look at articles I have written, or for more information about me.
+
+------
+
+
+
+[[./me/]]
+
+
+
+[[./articles/]]
+
+
+
+
+#+END_CENTER

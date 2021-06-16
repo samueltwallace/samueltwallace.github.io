@@ -1,50 +1,311 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2021-06-16 Wed 07:54 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Void Linux</title>
-<meta name="author" content="Sam Wallace">
-<meta name="description" content="My experience with Void Linux.">
-</head><body>
+<meta name="generator" content="Org mode">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
-<nav>
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../../styles.css">
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Void Linux</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org8f96de0">1. Big Musls</a></li>
+<li><a href="#org5503c66">2. Install Process</a></li>
+<li><a href="#orgc8b4a42">3. System Configuration 1 </a></li>
+<li><a href="#org8f225d4">4. Package Repositories</a></li>
+<li><a href="#org87f6358">5. Development Team</a></li>
+</ul>
+</div>
+</div>
+<p>
+From the <a href="https://voidlinux.org">website</a> &#x2026;
+</p>
 
-<a href="/">Home</a>
-<a href="/articles">Article Index</a>
-<a href="/me/">About Me</a>
+<blockquote>
+<p>
 
-</nav>
+</p>
 
+<p>
+"Void is a general purpose operating system, based on the monolithic Linux kernel. Its package system allows you to quickly install, update and remove software; software is provided in binary packages or can be built directly from sources with the help of the XBPS source packages collection."
+</p>
+</blockquote>
 
-<h1>Void Linux</h1>
+<p>
+This was my first minimal Linux distribution. This is to serve as an ongoing review for my use and interaction with my two machines running the operating system.
+</p>
 
-<p>From the <a href="https://voidlinux.org">website</a> ...</p><br>
+<div id="outline-container-org8f96de0" class="outline-2">
+<h2 id="org8f96de0"><span class="section-number-2">1</span> Big Musls</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+I chose the musl version of Void, for almost no reason than to try it out. On the whole, it hasn't made a difference for me a bit. Maybe because I don't know my computer well enough to understand the advantages, but also I don't do anything too low leve on the operating system. All I can say is that I now can't use WideVine to watch Netflix on Void (which is fine; I can watch it on Windows). That gap, however, makes my work machine, well, a work machine. The most distracting thing I can do is watch Youtube, which I don't do anyways.
+</p>
+</div>
+</div>
 
-<p><blockquote>"Void is a general purpose operating system, based on the monolithic Linux kernel. Its package system allows you to quickly install, update and remove software; software is provided in binary packages or can be built directly from sources with the help of the XBPS source packages collection."</blockquote></p><br>
+<div id="outline-container-org5503c66" class="outline-2">
+<h2 id="org5503c66"><span class="section-number-2">2</span> Install Process</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+I loved the install process. It made the installation easy. A nice TUI interface guides you through everything that would go into a `chroot`-ed installation, no mess, no fuss, exit any time. That said, I neglected some of the finer details of the installation process, maybe because I was too preoccupied with the nice interface. It requires quite a bit of knowledge about installing linux (e.g. partitioning, addusr, passwd, etc.). I think if there is a next time, I will opt for a chroot installation.
+</p>
+</div>
+</div>
 
-<p>This was my first minimal Linux distribution. This is to serve as an ongoing review for my use and interaction with my two machines running the operating system. </p><br>
+<div id="outline-container-orgc8b4a42" class="outline-2">
+<h2 id="orgc8b4a42"><span class="section-number-2">3</span> System Configuration <a href="#org42c13c4">3</a> <a id="org42c13c4"></a></h2>
+<div class="outline-text-2" id="text-3">
+<div class="sidenote div" id="orgaffd5f4">
+<p>
+<a href="#org42c13c4">3</a> You should read <a href="https://docs.voidlinux.org/config/index.html">the manual</a>.
+</p>
 
-<h3>Big Musls</h3>
+</div>
 
-<p>I chose the musl version of Void, for almost no reason than to try it out. On the whole, it hasn't made a difference for me a bit. Maybe because I don't know my computer well enough to understand the advantages, but also I don't do anything too low leve on the operating system. All I can say is that I now can't use WideVine to watch Netflix on Void (which is fine; I can watch it on Windows). That gap, however, makes my work machine, well, a work machine. The most distracting thing I can do is watch Youtube, which I don't do anyways. </p><br>
+<p>
+This is all pretty standard for a Linux system. The biggest difference is the one Void prides itself on, the use of runit as an init service. For those of you not familiar, the init system is the first process in the operating system. It also manages processes, killing dead ('zombie') processes, and manages services. The CLI is easy to use, a simple `sudo sv up $SERVICE ` starts a service, and soft-linking a directory to the /var/service directory marks a systems to be enabled. Not bad at all.
+</p>
+</div>
+</div>
 
-<h3>Install Process</h3>
+<div id="outline-container-org8f225d4" class="outline-2">
+<h2 id="org8f225d4"><span class="section-number-2">4</span> Package Repositories</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+This is where I feel most disappointed with Void; I think the repositories are lacking. I would like to see more of small stuff. There hasn't been any deal-breaking packages I haven't been able to find, but I am consistently disappointed with my small searches. There's not much community around Void.
+</p>
+</div>
+</div>
 
-<p>I loved the install process. It made the installation easy. A nice TUI interface guides you through everything that would go into a <code>chroot</code>-ed installation, no mess, no fuss, exit any time. That said, I neglected some of the finer details of the installation process, maybe because I was too preoccupied with the nice interface. It requires quite a bit of knowledge about installing linux (e.g. partitioning, addusr, passwd, etc.). I think if there is a next time, I will opt for a chroot installation. </p><br>
+<div id="outline-container-org87f6358" class="outline-2">
+<h2 id="org87f6358"><span class="section-number-2">5</span> Development Team</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+This is another point of disappointment with Void. Their main developer (xtraeme) has been acting somewhat erratically. He was apparently a pain to work with (not a claim I've seen him refute) and got booted off the team, and his account on GitHub got suspended. Then he continues writing programs and packages for Void and posting them to Reddit.  ==
+</p>
 
-<h3>System configuration<sup><a href="#sidenote1">1</a></sup></h3>
-
-<div class="sidenote"><sup><a id="sidenote1">1</a></sup>You should read <a href="https://docs.voidlinux.org/config/index.html">the manual</a>.</div>
-
-<p>This is all pretty standard for a Linux system. The biggest difference is the one Void prides itself on, the use of runit as an init service. For those of you not familiar, the init system is the first process in the operating system. It also manages processes, killing dead ('zombie') processes, and manages services. The CLI is easy to use, a simple <code>sudo sv up $SERVICE </code> starts a service, and soft-linking a directory to the /var/service directory marks a systems to be enabled. Not bad at all. </p><br>
-
-<h3>Package Repositories</h3>
-
-<p>This is where I feel most disappointed with Void; I think the repositories are lacking. I would like to see more of small stuff. There hasn't been any deal-breaking packages I haven't been able to find, but I am consistently disappointed with my small searches. There's not much community around Void. </p><br>
-
-<h3>Development Team</h3>
-
-<p>This is another point of disappointment with Void. Their main developer (xtraeme) has been acting somewhat erratically. He was apparently a pain to work with (not a claim I've seen him refute) and got booted off the team, and his account on GitHub got suspended. Then he continues writing programs and packages for Void and posting them to Reddit.  </p><br>
-
-<p>But on a more concrete note, there hasn't been a release of iso in over a year. I fear the system is soon to be dead. The only serious users are a couple of ricers over on /r/unixporn. The major roles filled by minimal operating systems are filled. Even Void's claim to fames are not unique or even special, <a href="https://distrowatch.com/search.php?ostype=All&category=All&origin=All&basedon=All&notbasedon=None&desktop=All&architecture=All&package=All&rolling=All&isosize=All&netinstall=All&language=All&defaultinit=Not+systemd&status=Active#simple">a search on Distrowatch</a> shows many non-systemd init systems, and runit shows a far more popular distro, antiX. There is really nothing to make Void stand out anymore. </p><br>
-
+<p>
+But on a more concrete note, there hasn't been a release of iso in over a year. I fear the system is soon to be dead. The only serious users are a couple of ricers over on /r/unixporn. The major roles filled by minimal operating systems are filled. Even Void's claim to fames are not unique or even special, <a href="https://distrowatch.com/search.php?ostype=All&amp;category=All&amp;origin=All&amp;basedon=All&amp;notbasedon=None&amp;desktop=All&amp;architecture=All&amp;package=All&amp;rolling=All&amp;isosize=All&amp;netinstall=All&amp;language=All&amp;defaultinit=Not+systemd&amp;status=Active#simple">a search on Distrowatch</a> shows many non-systemd init systems, and runit shows a far more popular distro, antiX. There is really nothing to make Void stand out anymore.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2021-06-16 Wed 07:54</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
 </body>
 </html>

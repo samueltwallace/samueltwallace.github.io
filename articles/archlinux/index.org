@@ -1,0 +1,25 @@
+#+TITLE: Arch Linux
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../../styles.css">
+
+Here is my ongoing experience with Arch Linux.
+
+* Installation
+
+Installation was relatively painless. I knew what I was doing at this point. The one thing that got me was that `dhcp` was not installed, so when I booted into the live system, I had no internet whatsoever, requiring me to go back into the live environment and troubleshoot. I also had trouble with deciding where to mount the EFI System partition, and my initial mountpoint ended up with grub not finding Arch Linux. Reminder: you should not mount the EFI partition directly onto /boot. Mount it onto /efi or something.
+
+* Customization
+
+I decided to go with a new window manager. I decided I wanted to write my own, as well. I first installed Qtile, found the default behavior unspeakably awful, and decided for XMonad. I don't know Haskell, but I figured out how to set up keybinds and such and got some 'sensible' ones configured. I like pacman, pretty fast and easy to use; not much to say there. I also haven't set up a dotfiles repository yet, but here's a short list of what I have installed:
+
+- Xorg
+- Neovim
+- XMonad
+- fzf
+- ripgrep
+- Neofetch (for that sweet sweet karma)
+- texlab
+- tmux (new for me )
+- Firefox
+
+and a couple other odds and ends.
