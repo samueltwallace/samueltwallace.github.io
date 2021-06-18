@@ -1,0 +1,34 @@
+#+TITLE: Partition for Shared Files between Windows and Linux
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../../styles.css">
+
+This is my guide and experience with setting up an NTFS partition for shared files between Windows and Linux.
+
+* If you haven't installed Linux yet (easier, if installing Linux is easy for you)
+
+Then this is simple.
+
+1. Go into Windows, open the Start menu and search "partition" (We're looking for the Disk Manager).
+2. Then shrink C: using a right-click option.
+3. Right click on the free space and go through the wizard for a new partition. You want an NTFS partitons. All other defaults should be fine if you're not too pickly. Create the partition with room to spare for Linux. (You can't create the Linux partition on Windows).
+4. Install Linux like normal, not touching the Windows or newly created partition.
+
+Done.
+
+* If you have Linux installed (harder)
+
+For this you will need a Linux live environment, some patience, and perhaps a backup of you disk.
+
+#+ATTR_HTML: :class sidenote
+#+BEGIN_div
+<<1>> [[1]] If you are overly ambitious like me and just try to log back into Linux, grub will drop you into a rescue shell. You can fangle with that if you NEED to boot into your Linux, but I really think a live environment is the way to go.
+
+This happens because Windows mixes up your partitions when it makes the new one, so grub complains when everything is mixed up.
+#+END_div
+  
+1. Go into Windows and create a new partition following the steps from above, except maybe you don't need free space on your disk if you're not installing Linux.
+2. Boot into a Linux live environment and re-run ~grub-mkconfig~. [[1]] Make sure that in your ~/etc/default/grub~ you have the line ~GRUB_DISABLE_OS_PROBER=false~ if you want to have a Grub entry for Windows.
+3. You may need to install NTFS support for Linux. On Arch, it's the package ~ntfs-3g~, not sure about others.
+4. (Optional) Add the shared partition to ~/etc/fstab~.
+   
+Done. 
