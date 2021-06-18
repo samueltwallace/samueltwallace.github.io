@@ -6,10 +6,15 @@ This is my guide and experience with setting up an NTFS partition for shared fil
 
 * If you haven't installed Linux yet (easier, if installing Linux is easy for you)
 
+#+ATTR_HTML: :class sidenote
+#+BEGIN_div
+<<1>> [[1]] We manage partitions in Windows because that's the only way Windows will recognize the partition for mounting. I first tried to make the partition with ~fdisk~ and Windows saw the partition and chose to ignore it.
+#+END_div
+
 Then this is simple.
 
 1. Go into Windows, open the Start menu and search "partition" (We're looking for the Disk Manager).
-2. Then shrink C: using a right-click option.
+2. Then shrink C: using a right-click option. [[1]]
 3. Right click on the free space and go through the wizard for a new partition. You want an NTFS partitons. All other defaults should be fine if you're not too pickly. Create the partition with room to spare for Linux. (You can't create the Linux partition on Windows).
 4. Install Linux like normal, not touching the Windows or newly created partition.
 
@@ -21,13 +26,13 @@ For this you will need a Linux live environment, some patience, and perhaps a ba
 
 #+ATTR_HTML: :class sidenote
 #+BEGIN_div
-<<1>> [[1]] If you are overly ambitious like me and just try to log back into Linux, grub will drop you into a rescue shell. You can fangle with that if you NEED to boot into your Linux, but I really think a live environment is the way to go.
+<<2>> [[2]] If you are overly ambitious like me and just try to log back into Linux, grub will drop you into a rescue shell. You can fangle with that if you NEED to boot into your Linux, but I really think a live environment is the way to go.
 
 This happens because Windows mixes up your partitions when it makes the new one, so grub complains when everything is mixed up.
 #+END_div
   
 1. Go into Windows and create a new partition following the steps from above, except maybe you don't need free space on your disk if you're not installing Linux.
-2. Boot into a Linux live environment and re-run ~grub-mkconfig~. [[1]] Make sure that in your ~/etc/default/grub~ you have the line ~GRUB_DISABLE_OS_PROBER=false~ if you want to have a Grub entry for Windows.
+2. Boot into a Linux live environment and re-run ~grub-mkconfig~. [[2]] Make sure that in your ~/etc/default/grub~ you have the line ~GRUB_DISABLE_OS_PROBER=false~ if you want to have a Grub entry for Windows.
 3. You may need to install NTFS support for Linux. On Arch, it's the package ~ntfs-3g~, not sure about others.
 4. (Optional) Add the shared partition to ~/etc/fstab~.
    
