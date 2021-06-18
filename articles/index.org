@@ -14,5 +14,7 @@
 
 [[./emacs/]]
 
+[[./sharedfiles/]]
+
 * Statistics
 [[./lifetime/]]
