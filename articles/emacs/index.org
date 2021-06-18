@@ -12,7 +12,7 @@ I used (Neo)vim for about a year. But then, as is the cause of all *-hopping, I 
 
 I think I needed something a little more dedicated for text editing. Something a little more robust. Not to critique *-vim too much, but it's a little too small for big editing task - and by editing tasks, I mean something that can parse and execute user-defined commands efficiently.
 
-I also wanted something that I can reach into the internals a littl more. I avoided Vimscript, but because it was a little opaque. Emacs Lisp, on the other hand, is more familiar and easier to pick up. I also like the easy documentation inside Emacs itself.
+I also wanted something that I can reach into the internals a little more. I avoided Vimscript, but because it was a little opaque. Emacs Lisp, on the other hand, is more familiar and easier to pick up. I also like the easy documentation inside Emacs itself.
 
 * What I've gotten
 
