@@ -20,6 +20,8 @@ I have had a great experience. I like that Emacs buffers are persistent upon exi
 
 I also love Org mode. It's more feature-full than VimWiki, which I used for a while, and makes creating a website easy :).
 
+I think in terms of [[https://blog.vivekhaldar.com/post/3996068979/the-levels-of-emacs-proficiency][Vivek Haldar's levels of Emacs proficiency]], I am at 3.
+
 * What I want more of
 
 I want to reach into the internals and write a big config. I would also love to try loading more config as I go, in the 'layer' scheme.

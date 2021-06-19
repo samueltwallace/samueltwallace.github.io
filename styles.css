@@ -6,8 +6,8 @@ body {
 	font-family:IBM Plex Serif;
 	margin: 5% 15% ;
 	font-size:15pt ;
-	background-color: #282828 !important;
-        color: #83a598 !important;
+	background-color: #4C5668 !important;
+        color: #ECEFF4 !important;
 	overflow:auto;
 }
 
@@ -16,11 +16,11 @@ div.sidenote {
         font-size:12pt;
 	float:right;
 	margin:0% 1%;
-	border: 2px solid #3c3836;
+	border: 2px solid #2E3440;
 	padding: 2% 2%;
 	max-width: 35%;
 }
 
 a {
-  color: #458588 !important;
+  color: #D8DEE9 !important;
 }
