@@ -12,15 +12,6 @@ body {
 }
 
 
-div.sidenote {
-        font-size:12pt;
-	float:right;
-	margin:0% 1%;
-	border: 2px solid #2E3440;
-	padding: 2% 2%;
-	max-width: 35%;
-}
-
 a {
   color: #D8DEE9 !important;
 }

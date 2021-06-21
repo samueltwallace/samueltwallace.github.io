@@ -9,12 +9,10 @@ Probably a question on many people's mind. I'm going to dig into some fairly com
 
 * Methods and Data
 
-#+ATTR_HTML: :class sidenote
-#+BEGIN_div
-[[1]] <<1>> Per [[https://www.wikiwand.com/en/Life_table][Wikipedia]], this is "a table which shows, for each age, what the probability is that a person of that age will die before their next birthday [...] it represents the survivorship of people from a certain generation." It's a reference in the actuarial sciences to estimate prices of insurance products.
-#+END_div
+[fn:1] Per [[https://www.wikiwand.com/en/Life_table][Wikipedia]], this is "a table which shows, for each age, what the probability is that a person of that age will die before their next birthday [...] it represents the survivorship of people from a certain generation." It's a reference in the actuarial sciences to estimate prices of insurance products.
 
-The main tool I'm going to be using to determine how long I will live is *actuarial tables* [[1]]. There are several reasons I want to use this as a main reference:
+
+The main tool I'm going to be using to determine how long I will live is *actuarial tables* [fn:1]. There are several reasons I want to use this as a main reference:
 
 - They're backed up by data: Insurance companies keep track of this stuff in order to make money. And they're doing pretty well, so they must be doing something right.
 - They're available: The US government and various actuarial institutes make past data available to the public, and making it easy for me to use as well.
@@ -43,13 +41,12 @@ This seems like a good first attempt with litle information about me. It gives m
 
 After I get out of school, I'm almost definitely going to be in a white-collar job. I come from a middle-class white family in the US. Let's see what we get from that.
 
-#+ATTR_HTML: :class sidenote
-#+BEGIN_div
-[[2]] <<2>> Interestingly enough, there's a higher life expectancy for group insurance than individual insurance. Maybe group insurance comes with a good paying-job?
-#+END_div
+
+[fn:2] Interestingly enough, there's a higher life expectancy for group insurance than individual insurance. Maybe group insurance comes with a good paying-job?
 
 
-- Being on a group insurance plan (like one I am going to get from my future employer)[[2]]
+
+- Being on a group insurance plan (like one I am going to get from my future employer)[fn:2]
 - On a private pension plan in a white-collar job, I have a 17% chance of living to 100
 
 Here's where the easy graphics and calculators end. Now I actually have to dig into [[https://stacks.cdc.gov/pdfjs/web/viewer.html?file=https://stacks.cdc.gov/view/cdc/78186/cdc_78186_DS1.pdf][a table]].
@@ -82,11 +79,10 @@ And survey says... I'm at a highest risk for a stretch of bad health at least 14
 
 * Conclusions
 
-#+ATTR_HTML: :class sidenote
-#+BEGIN_div
-[[3]] <<3>> This study also comments that past studies on this topic ignore the fact that genetic similarities often arise between spouses. This may be a more significant factor than others. They also comment on the transferral of socioeconomic resources in a marriage, and how that may contribute to increased longevity.
-#+END_div
 
-I gained some insight into my demographics and factors for death. I have a pretty good life expectancy (80+), supported by my anecdotal grandparents' ages (90+). Though this may not be true, as [[https://www.genetics.org/content/210/3/1109.figures-only][spousal lifespan has a higher correlation with your own lifespan than your blood family's]] [[3]]. So maybe I should marry someone with a long projected life span rather than depending on my genes. 
+[fn:3] This study also comments that past studies on this topic ignore the fact that genetic similarities often arise between spouses. This may be a more significant factor than others. They also comment on the transferral of socioeconomic resources in a marriage, and how that may contribute to increased longevity.
+
+
+I gained some insight into my demographics and factors for death. I have a pretty good life expectancy (80+), supported by my anecdotal grandparents' ages (90+). Though this may not be true, as [[https://www.genetics.org/content/210/3/1109.figures-only][spousal lifespan has a higher correlation with your own lifespan than your blood family's]] [fn:3]. So maybe I should marry someone with a long projected life span rather than depending on my genes. 
 
 Another thing to consider is not that I want to live grossly longer, but also maintain some quality of life in my old age. I think [[*Other Demographics][my lack of exercise]] does not help this at all. If I want to live longer, I need to take steps to ensure my old age is enjoyable. Anyone who's seen a documentary on longevity has heard that centenarians in various places (Italy, Greece, Japan) maintain some exercise, a good social life, and are vegetarian. While I haven't look for statistics to back this up, I think these are important not only for extending your lifetime, but also for enjoying your lifetime.

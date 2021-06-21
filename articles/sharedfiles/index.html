@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-06-18 Fri 07:04 -->
+<!-- 2021-06-21 Mon 16:14 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Partition for Shared Files between Windows and Linux</title>
@@ -221,8 +221,8 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgb8627db">1. If you haven't installed Linux yet (easier, if installing Linux is easy for you)</a></li>
-<li><a href="#org8a0344c">2. If you have Linux installed (harder)</a></li>
+<li><a href="#orgfa509b2">1. If you haven't installed Linux yet (easier, if installing Linux is easy for you)</a></li>
+<li><a href="#orgc8e6760">2. If you have Linux installed (harder)</a></li>
 </ul>
 </div>
 </div>
@@ -230,23 +230,16 @@
 This is my guide and experience with setting up an NTFS partition for shared files between Windows and Linux.
 </p>
 
-<div id="outline-container-orgb8627db" class="outline-2">
-<h2 id="orgb8627db"><span class="section-number-2">1</span> If you haven't installed Linux yet (easier, if installing Linux is easy for you)</h2>
+<div id="outline-container-orgfa509b2" class="outline-2">
+<h2 id="orgfa509b2"><span class="section-number-2">1</span> If you haven't installed Linux yet (easier, if installing Linux is easy for you)</h2>
 <div class="outline-text-2" id="text-1">
-<div class="sidenote div" id="org78a5c59">
-<p>
-<a id="org6d49249"></a> <a href="#org6d49249">1</a> We manage partitions in Windows because that's the only way Windows will recognize the partition for mounting. I first tried to make the partition with <code>fdisk</code> and Windows saw the partition and chose to ignore it.
-</p>
-
-</div>
-
 <p>
 Then this is simple.
 </p>
 
 <ol class="org-ol">
 <li>Go into Windows, open the Start menu and search "partition" (We're looking for the Disk Manager).</li>
-<li>Then shrink C: using a right-click option. <a href="#org6d49249">1</a></li>
+<li>Then shrink C: using a right-click option. <sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup></li>
 <li>Right click on the free space and go through the wizard for a new partition. You want an NTFS partitons. All other defaults should be fine if you're not too pickly. Create the partition with room to spare for Linux. (You can't create the Linux partition on Windows).</li>
 <li>Install Linux like normal, not touching the Windows or newly created partition.</li>
 </ol>
@@ -257,27 +250,17 @@ Done.
 </div>
 </div>
 
-<div id="outline-container-org8a0344c" class="outline-2">
-<h2 id="org8a0344c"><span class="section-number-2">2</span> If you have Linux installed (harder)</h2>
+<div id="outline-container-orgc8e6760" class="outline-2">
+<h2 id="orgc8e6760"><span class="section-number-2">2</span> If you have Linux installed (harder)</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 For this you will need a Linux live environment, some patience, and perhaps a backup of you disk.
 </p>
 
-<div class="sidenote div" id="org944c1f6">
-<p>
-<a id="orgbaa48e2"></a> <a href="#orgbaa48e2">2</a> If you are overly ambitious like me and just try to log back into Linux, grub will drop you into a rescue shell. You can fangle with that if you NEED to boot into your Linux, but I really think a live environment is the way to go.
-</p>
-
-<p>
-This happens because Windows mixes up your partitions when it makes the new one, so grub complains when everything is mixed up.
-</p>
-
-</div>
 
 <ol class="org-ol">
 <li>Go into Windows and create a new partition following the steps from above, except maybe you don't need free space on your disk if you're not installing Linux.</li>
-<li>Boot into a Linux live environment and re-run <code>grub-mkconfig</code>. <a href="#orgbaa48e2">2</a> Make sure that in your <code>/etc/default/grub</code> you have the line <code>GRUB_DISABLE_OS_PROBER=false</code> if you want to have a Grub entry for Windows.</li>
+<li>Boot into a Linux live environment and re-run <code>grub-mkconfig</code>. <sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup> Make sure that in your <code>/etc/default/grub</code> you have the line <code>GRUB_DISABLE_OS_PROBER=false</code> if you want to have a Grub entry for Windows.</li>
 <li>You may need to install NTFS support for Linux. On Arch, it's the package <code>ntfs-3g</code>, not sure about others.</li>
 <li>(Optional) Add the shared partition to <code>/etc/fstab</code>.</li>
 </ol>
@@ -287,9 +270,24 @@ Done.
 </p>
 </div>
 </div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+We manage partitions in Windows because that's the only way Windows will recognize the partition for mounting. I first tried to make the partition with <code>fdisk</code> and Windows saw the partition and chose to ignore it.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+If you are overly ambitious like me and just try to log back into Linux, grub will drop you into a rescue shell. You can fangle with that if you NEED to boot into your Linux, but I really think a live environment is the way to go.
+This happens because Windows mixes up your partitions when it makes the new one, so grub complains when everything is mixed up.
+</p></div></div>
+
+
 </div>
+</div></div>
 <div id="postamble" class="status">
-<p class="date">Created: 2021-06-18 Fri 07:04</p>
+<p class="date">Created: 2021-06-21 Mon 16:14</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

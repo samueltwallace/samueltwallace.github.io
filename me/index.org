@@ -28,10 +28,8 @@ Here are things I think other people should be exposed to.
 
 ** Recommended Reading 
 
-#+ATTR_HTML: :class sidenote
-#+BEGIN_div
-<<1>> [[1]]"Deep in the human unconscious is a pervasive need for a logical universe that makes sense. But the real universe is always one step beyond logic."
-#+END_div
+
+[fn:1] "Deep in the human unconscious is a pervasive need for a logical universe that makes sense. But the real universe is always one step beyond logic."
 
 
 - /Procession of the Black Sloth/ by Laird Barron (Horror)
@@ -41,17 +39,15 @@ Here are things I think other people should be exposed to.
 - /Foundation/ Trilogy by Isaac Asimov (Far Future Sci-fi, society, history, technology)
 - Most anything by Stephen King (Horror, the human experience)
 
-#+ATTR_HTML: :class sidenote
-#+BEGIN_div
-<<2>> [[2]]"The more civilized a nation, the more conformed its population, until that civilization's last age arrives, when multiplicity wages war with conformity. The former grows ever wilder, ever more dysfunctional in its extremities; whilst the latter seeks to increase its measure of control, until such efforts acquire diabolical tyranny."
-#+END_div
+
+[fn:2]"The more civilized a nation, the more conformed its population, until that civilization's last age arrives, when multiplicity wages war with conformity. The former grows ever wilder, ever more dysfunctional in its extremities; whilst the latter seeks to increase its measure of control, until such efforts acquire diabolical tyranny."
 
 ** Required Reading
 
-- /Dune/ by Frank Herbert (Far-future Sci-fi, worldbuilding, cultures/society)[[1]]
-- /Malazan Book of the Fallen/ by Steven Erickson (High fantasy, wordbuilding, politics, power, religion, history, truth)[[2]]
+- /Dune/ by Frank Herbert (Far-future Sci-fi, worldbuilding, cultures/society)[fn:1]
+- /Malazan Book of the Fallen/ by Steven Erickson (High fantasy, wordbuilding, politics, power, religion, history, truth)[fn:2]
 - /Prose Edda/ by Snori Sturlusson (History, mythology, anthropology)
-- /The Call of Cthulhu/ by H.P. Lovecraft (horror)[[3]]
+- /The Call of Cthulhu/ by H.P. Lovecraft (horror)[fn:3]
 
 
 ** Recommended Watching
@@ -61,10 +57,8 @@ Here are things I think other people should be exposed to.
 - /Shawshank Redemption/
 - /Howl's Moving Castle/
 
-#+ATTR_HTML: :class sidenote
-#+BEGIN_div
-<<3>> [[3]]"We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far."
-#+END_div
+
+[fn:3] "We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far."
 
 ** Recommended Listening
 
@@ -73,26 +67,23 @@ Here are things I think other people should be exposed to.
 - /Tetsuo and Youth/ by Lupe Fiasco (Hip hop)
 - /Worlds/ by Porter Robinson (Electronic)
 
-#+ATTR_HTML: :class sidenote
-#+BEGIN_div
-<<4>> [[4]]"Did you ever wonder why we had to run for shelter when the promise of a brave new world unfurled beneath a clear blue sky?"
-#+END_div
+
+[fn:4] "Did you ever wonder why we had to run for shelter when the promise of a brave new world unfurled beneath a clear blue sky?"
+
 
 
 ** Required Listening
 
-- /The Wall/ by Pink Floyd (Prog/Classic Rock)[[4]]
+- /The Wall/ by Pink Floyd (Prog/Classic Rock)[fn:4]
 - /Bloom/ by Caligula's Horse (Progressive Metal)
-- Acts I-V of The Dear Hunter (Prog Rock/Metal)[[5]]
+- Acts I-V of The Dear Hunter (Prog Rock/Metal)[fn:5]
 - /The Mountain/ by Haken (Progressive Metal)
 
 
 ** Recommended Visiting
 
-#+ATTR_HTML: :class sidenote
-#+BEGIN_div
-<<5>>  [[5]]"And all the lessons learned / Were they worth the ash from all the bridges burned?"
-#+END_div
+[fn:5] "And all the lessons learned / Were they worth the ash from all the bridges burned?"
+
 
 - [[https://lobste.rs][Lobsters]]
 
