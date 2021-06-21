@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-06-15 Tue 23:49 -->
+<!-- 2021-06-21 Mon 17:01 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Keeping a Live Neofetch on GitHub</title>
@@ -221,8 +221,8 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org03de1d1">1. Git Hooks</a></li>
-<li><a href="#orga400392">2. Updating my Neofetch file</a></li>
+<li><a href="#orgc474a26">1. Git Hooks</a></li>
+<li><a href="#org8c02806">2. Updating my Neofetch file</a></li>
 </ul>
 </div>
 </div>
@@ -230,8 +230,8 @@
 If you haven't been to my GitHub before, you won't have seen my <a href="https://github.com/samueltwallace/avoidance-inspiron-dotfiles">dotfiles repo</a> before (or my old <a href="https://github.com/samueltwallace/dotfiles-inspiron/">Ubuntu Dotfiles</a>). If you notice, I have a <code>curl</code>-able neofetch of my system there. I have devised a way to keep it updated everytime I update my dotfiles, so no more manually updating the file, adding it to my bare git repository for my dotfiles, and then commiting and pushing. I used the magic of Git hooks to make it automatic.
 </p>
 
-<div id="outline-container-org03de1d1" class="outline-2">
-<h2 id="org03de1d1"><span class="section-number-2">1</span> Git Hooks</h2>
+<div id="outline-container-orgc474a26" class="outline-2">
+<h2 id="orgc474a26"><span class="section-number-2">1</span> Git Hooks</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Git hooks were something I did not know about until recently until I made a bare git repository and got into the guys of what typically goes into a .git folder. I saw this mysterious <code>hooks</code> folder and decided to investigate the folder with Google in another tab. After learning a little bit about them, I think this is the kind of thing that could be a major boost in my workflow. 
@@ -254,8 +254,8 @@ All the scripts you want to happened go into the <code>.git/hooks</code> folder 
 </div>
 </div>
 
-<div id="outline-container-orga400392" class="outline-2">
-<h2 id="orga400392"><span class="section-number-2">2</span> Updating my Neofetch file</h2>
+<div id="outline-container-org8c02806" class="outline-2">
+<h2 id="org8c02806"><span class="section-number-2">2</span> Updating my Neofetch file</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 In my <code>$HOME</code>, I have a file called <code>neofetch</code> that contains the output of <code>date &amp;&amp; neofetch</code>. I used to update this every so often when I committed my dotfiles by running <code>echo "$(date &amp;&amp; neofetch)" &gt; $HOME/neofetch</code> whenever I remembered to. I would then add the file to be committed, then commit and push.
@@ -280,7 +280,7 @@ And now when I commit, it updates the Neofetch file and adds it to be committed,
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2021-06-15 Tue 23:49</p>
+<p class="date">Created: 2021-06-21 Mon 17:01</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

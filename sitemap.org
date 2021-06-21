@@ -1,0 +1,22 @@
+#+TITLE: Map of this site
+
+- [[file:index.org][Homepage]]
+- [[file:404.org][Page Not Found]]
+- articles
+  - [[file:articles/index.org][Articles]]
+  - VoidLinux
+    - [[file:articles/VoidLinux/index.org][Void Linux]]
+  - archlinux
+    - [[file:articles/archlinux/index.org][Arch Linux]]
+  - emacs
+    - [[file:articles/emacs/index.org][Emacs]]
+  - lifetime
+    - [[file:articles/lifetime/index.org][How Long will I live?]]
+  - live-neofetch
+    - [[file:articles/live-neofetch/index.org][Keeping a Live Neofetch on GitHub]]
+  - sharedfiles
+    - [[file:articles/sharedfiles/index.org][Partition for Shared Files between Windows and Linux]]
+  - site
+    - [[file:articles/site/index.org][This Site]]
+- me
+  - [[file:me/index.org][About Sam]]
