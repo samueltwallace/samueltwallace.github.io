@@ -23,3 +23,10 @@ I decided to go with a new window manager. I decided I wanted to write my own, a
 - Firefox
 
 and a couple other odds and ends.
+
+* Several Months in...
+
+After 6 months into Arch Linux, I am comfortable with it. I actually mainly use my main OS, Emacs, now, but Arch is a good base. It has better availability and better perfomance of most software compared to Void.
+
+I am somewhat surprised by how stable it's been. I expected that as a rolling release, there would be broken packages and such, but that has not happened once. Based on my experience of Void and Arch, rolling release no longer means instability for a personal computer. It means no heavy updates. I can imagine incremental rolling updates to actually be easier to handle than big breaking updates.
+
