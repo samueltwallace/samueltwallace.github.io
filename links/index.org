@@ -4,7 +4,7 @@
 
 Here are some links and articles. I have also produced a pdf version of them in case the link dies, or if you prefer a JavaScript free reading environment.
 
-- [[https://www.gwern.net/The-Melancholy-of-Subculture-Society][The Melancholy of Subculture Society]], [[/pdfs/melancholy][pdf]]. Gwern explains the by and large fracturing of social circles and the decline in 'social capital.'
-- [[https://www.slatestarcodexabridged.com/I-Can-Tolerate-Anything-Except-The-Outgroup][I Can Tolerate Anything Except The Outgroup]], [[/pdfs/outgroup.pdf][pdf]]. Scott Alexander gripes about the growing number of people unwilling to engage genuinely with those outside their political bubble.
-- [[https://www.slatestarcodexabridged.com/The-Parable-Of-The-Talents][The Parable of the Talents]], [[/pdfs/talents.pdf][pdf]]. Scott explains that just because you aren't the best in the world, you can still make a meaningful contribution.
-- [[https://www.lesswrong.com/s/NHXY86jBahi968uW4/p/aMHq4mA2PHSM2TMoH][The Categories Were Made For Man, Not Man For The Categories]], [[/pdfs/categories.pdf][pdf]]. We form our own language and definitions - no gods, no masters.
+- [[https://www.gwern.net/The-Melancholy-of-Subculture-Society][The Melancholy of Subculture Society]], [[../pdfs/melancholy][pdf]]. Gwern explains the by and large fracturing of social circles and the decline in 'social capital.'
+- [[https://www.slatestarcodexabridged.com/I-Can-Tolerate-Anything-Except-The-Outgroup][I Can Tolerate Anything Except The Outgroup]], [[../pdfs/outgroup.pdf][pdf]]. Scott Alexander gripes about the growing number of people unwilling to engage genuinely with those outside their political bubble.
+- [[https://www.slatestarcodexabridged.com/The-Parable-Of-The-Talents][The Parable of the Talents]], [[../pdfs/talents.pdf][pdf]]. Scott explains that just because you aren't the best in the world, you can still make a meaningful contribution.
+- [[https://www.lesswrong.com/s/NHXY86jBahi968uW4/p/aMHq4mA2PHSM2TMoH][The Categories Were Made For Man, Not Man For The Categories]], [[../pdfs/categories.pdf][pdf]]. We form our own language and definitions - no gods, no masters.
