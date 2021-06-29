@@ -24,7 +24,7 @@ There are several places to go from here. You can take a look at articles I have
 
 [[./articles/]]
 
-
+[[./links/]]
 
 
 #+END_CENTER

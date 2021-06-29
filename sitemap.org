@@ -18,5 +18,7 @@
     - [[file:articles/sharedfiles/index.org][Partition for Shared Files between Windows and Linux]]
   - site
     - [[file:articles/site/index.org][This Site]]
+- links
+  - [[file:links/index.org][Favorite Links]]
 - me
   - [[file:me/index.org][About Sam]]
