@@ -1,0 +1,86 @@
+#+TITLE: Mathematical Models of Flyswatting
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../../styles.css">
+
+{{{author}}}
+
+Can you ever smash that peksy fly? Here I present five modeling assumptions for fly swatting and explore two models incorporating these assumptions and see what results we can show. I then explore potential future results in this new field.
+
+(This is a for fun article).
+
+* Modeling Assumptions
+
+Here are five modeling assumptions for fly swatting. We tactily assume familiarity with reasonable definitions of swat, swatting object, etc.
+
+- (S1) The fly is 'swatted' when contact is made between the swatting object and the fly.
+- (S2) The fly position has two states: before swat and after swat, and the second is uniquely determined by the first.
+- (S3) The swatting object can be modeled by a point of impact, whereupon the fly is swatted when the fly position and swatting object point of impact position coincide.
+- (S4) The fly can be modeled by a point.
+- (S5) The swatting object and fly stay within a connected, closed bounded region of space.
+
+Our models will proceed by assuming or not assuming the above. In the 'discrete point-point' model, we will assume all of the above. In the 'continuous tracker' model, we will assume only (S4) and replace the other assumptions by continuous analogs. We will also make mention but not explore in any depth probabilistic models for fly swatting.
+
+* Exploration of Models
+** Discrete Point-Point
+We assume (S1)-(S5). Given (S2), we have a functional a functional relationship between the before-swat position $x$ and the post-swat position $y$ so that $y = F(x)$. Given (S5), we can state a domain and codomain for $F$: if $\Omega$ is the region of space the swatter and the fly may occupy, then $F$ should map $\Omega$ to itself: $F: \Omega \to \Omega$.
+
+Our condition for swatting is given by (S3), and we can argue for a swat condition including $F$. Indeed, our fly is swatted if its post-swat positions aligns with the swat position. This gives the functional relationship $x_{swatted} = F(x_{swatted})$. This gives us our first result.
+
+*Theorem 1* Given (S1)-(S5), there is at least one point at which you can aim and successfully swat the fly. \\
+
+
+*Proof 1* By the above discussion, it suffices to find a point $z$ which is a fixed point of $F$. The [[https://en.wikipedia.org/wiki/Brouwer_fixed-point_theorem][Brouwer fixed-point]] theorem applies, as we have a map of a connected compact domain in $\mathbb{R}^n$ to itself. Thus we are done.
+
+Algorithms for finding the fixed point can be solved by any multi-dimensional root-finding algorithm. Here we will explain an application of Newton's method.
+
+[[https://en.wikipedia.org/wiki/Newton's_method][Newton's method]] for systems of equations reads
+
+\begin{equation}
+z_{n+1} = z_n = J_G (z_n)^{-1} G(z_n)
+\end{equation}
+
+Where $G: U \to U$, and $J_G$ is the Jacobian matrix of $G$. This algorithm finds a root of the function $G$. By taking $G(z) = F(z) - z$, we can find a fixed point of $F$. However, the Jacobian of $G$ is not known in practice: it requires perfect knowledge of the fly's movements in an open subset of a point.
+
+We can perhaps modify this method by a linear approximation of the Jacobian at a certain point: Use instead of $J_G(z_n)$ a matrix $L_G(z_n, z_{n+1})$ satisfying
+
+\begin{equation}
+G(z_{n+1}) - G(z_n) = L_G(z_n, z_{n+1}) (z_n - z_{n+1})
+\end{equation}
+
+This is a multi-dimensional version of the [[https://en.wikipedia.org/wiki/Secant_method][secant method]].
+
+Based on the computational complexity of the algorithm in mental calculations, Newton's method is not recommended in hand-to-hand encounters with flies.
+
+** Continuous Tracker
+
+In this model, we assume only (S4) and proceed with general discussion. Other modeling assumptions will be made reference to and included for relevant discussions.
+
+We start by replacing (S2) with a continuous analogue: the fly has a flight path that is continuous in time. 
+
+Without (S3), we must specify a swatting condition. A more general but still physically plausible condition is a 'rigid-body' assumption on the swatting object: the swatting object is a rigid body, whose position can be completely specified by a point and an orientation. Its shape can be encode by a region of space. We will more often use the region's indicator function. We form a body function $B(x,y,\widehat{n})$ by the following criteria: $B(\cdot, y, \widehat{n})$ is the indicator function of the swatting object given its position and orientation $(y, \widehat{n})$ where $\widehat{n}$ is a unit vector. Given this, a model that qualifies a swat as simple contact between swatting object and fly seems easiest and still physically plausible.
+
+Now given a swatting object, we must now describe its swatting action. Indeed, now given a continuous-time model, we cannot simple assume one instant of slap with a single point of impact. Instead, we may develop a path of motion for the swatting object for it to follow towards the fly. One candidate is the 'tracker' path. Let $x(t)$ be the path of the fly. Then the path of the body position and orientation is given by
+
+\begin{equation}
+\frac{dy}{dt}(t) = s_0 \frac{x(t) - y(t)}{\vert x(t) - y(t) \vert} 
+\end{equation}
+\begin{equation}
+\frac{d \widehat{n}}{dt} = \frac{x(t) - y(t)}{\vert x(t) - y(t) \vert}
+\end{equation}
+
+i.e., the swatting object moves at a constant speed $s_0$ towards the fly, oriented directly at it. This is a conceptually simple model.
+
+Results remain wide open with these assumptions. No results are known to the author.
+
+Other tracking equations are possible, and possibly more valid depending on the swatting object and the swatting application in mind.
+
+** Probabilistic Models
+
+Even more sophisticated models are possible. One may evolve the fly path according to a probabilistic path; i.e. a stochastic process. A probabilistic tracker may follow a 'highest-likelihood' trajectory: follow the point at any given time where the fly is most likely to be. These models incorporate the seemingly random movements of flies as they fly.
+
+* Future Work and Acknowledgements
+
+Currently very little is known about fly-swatting problems in the knowledge of the author. Very likely tracking algorithms can be developed from known results in dynamics and controls results.
+
+Feedback and contributions are always welcome; submit an issue or pull request at [[https://github.com/samueltwallace/samueltwallace.github.io][GitHub]].
+
